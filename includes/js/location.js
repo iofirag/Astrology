@@ -6,8 +6,6 @@ function getCountryName() {
 		console.log("IP position " + myip + "- " + response.city);
 	}, "jsonp");
 }
-
-
 $(document).ready(function() {
 	//ip location
 	getCountryName();
