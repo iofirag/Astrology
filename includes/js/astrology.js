@@ -1,4 +1,7 @@
 var date;
+var currDay;
+var currMonth;
+var currYear;
 var zodiacSigns = {
 	'capricorn' : 'Capricorn',
 	'aquarius' : 'Aquarius',
@@ -21,25 +24,31 @@ $(document).ready(function() {
 
 function initDatePicker() {
 	var now = new Date();
-	var day = ("0" + now.getDate()).slice(-2);
-	var month = ("0" + (now.getMonth() + 1)).slice(-2);
-	var today = now.getFullYear() + "-" + (month) + "-" + (day);
+	currDay = ("0" + now.getDate()).slice(-2);
+	currMonth = ("0" + (now.getMonth() + 1)).slice(-2);
+	currYear = now.getFullYear();
+	today = (currYear) + "-" + (currMonth) + "-" + (currDay);
 	$('#date').val(today);
+	if (currDay < 10) // day
+		currDay = parseInt("10", currDay);
+	if (currMonth < 10) // month
+		currMonth = parseInt("10", currMonth);
+	//alert(currDay);alert(currMonth);alert(currYear);
 }
 
 function separateDatePickerValues() {
 	date = $('#date').val().split("-");
+	date[0] = new Date().getFullYear(); // year
 	if (date[1] < 10) // day
 		date[1] = parseInt("10", date[1]);
 	if (date[2] < 10) // month
 		date[2] = parseInt("10", date[2]);
 	xmlLoader();
-	return false;
-	// should be TRUE to procceed
+	return false; // should be TRUE to procceed
 }
 
 function xmlLoader() {
-	astrologyUrl = "http://www.findyourfate.com/rss/horoscope-astrology-feed.asp?mode=view&todate=" + date[1] + "/" + date[2] + "/" + date[0];
+	astrologyUrl = "http://www.findyourfate.com/rss/horoscope-astrology-feed.asp?mode=view&todate="+currMonth+"/"+currDay+"/"+currYear;
 	$.ajax({
 		url : astrologyUrl,
 		dataType : "xml",
@@ -51,9 +60,10 @@ function xmlLoader() {
 			//console.log(JSONConvertedXML);
 			var zodiac = getZodiac(date[2],date[1]); // return the zodiac sign
 			for (var i = 0; i < JSONConvertedXML.channel.item.length; i++) {
-				console.log(JSONConvertedXML.channel.item[i].title);
 				if (JSONConvertedXML.channel.item[i].title.indexOf(zodiac) != -1){
+					console.log(JSONConvertedXML.channel.item[i].title);
 					console.log(JSONConvertedXML.channel.item[i].description);
+					break;
 				}
 				//translateText(JSONConvertedXML.channel.item[i].description); // didn't work correctly yet
 			}
@@ -70,7 +80,7 @@ function translateText(text) {
 			//console.log("browser language"+language);
 		}
 	});
-	// //Call the Google API
+	//Call the Google API
 	$.ajax({
 		type : "GET",
 		url : "https://ajax.googleapis.com/ajax/services/language/translate",
