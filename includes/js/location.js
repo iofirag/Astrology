@@ -10,7 +10,7 @@ function getIpLocation() {
 		latitude=response.loc.substring(response.loc.indexOf(",")+1,response.loc.length);
 		console.log("IP location - " + longitude+" "+latitude);
 	}, "jsonp");
-	showPosition();
+	getCountryName();
 }
 function getLocation() {
 	if (navigator.geolocation) {
