@@ -67,17 +67,14 @@ function xmlLoader() {
 					console.log(JSONConvertedXML.channel.item[i].title);
 					console.log(JSONConvertedXML.channel.item[i].description);
 					translateText(JSONConvertedXML.channel.item[i].description);
-					// didn't work correctly yet
 					break;
 				}
 			}
 		}
 	});
 }
-
-var translateKey = "AIzaSyCClt5fo3FDMAym59FQw-R5D39eaTNfWIg";
-//AIzaSyAbgbFfwk-N0xLieZryYOknsJn0jWGS0qA
-function translateText(text) {
+var translateKey = "AIzaSyAwBnKumEHtOPQiV0Z40hGGVCtA4BIPtjQ";
+function translateText(text) { 
 
 	$.ajax({
 		url : "http://ajaxhttpheaders.appspot.com",
@@ -87,19 +84,20 @@ function translateText(text) {
 			//console.log("browser language"+language);
 		}
 	});
-	// $.ajax({
-	// type : "GET",
-	// url : "https://www.googleapis.com/language/translate/v2,
-	// dataType : 'jsonp',
-	// cache : false,
-	// contentType : "application/x-www-form-urlencoded; charset=UTF-8",
-	// data : "key="+translateKey+"&source=en&target=de&q=Hello",
-	// success : function(res) {
-	// console.log('res', res.data.translations[0].translatedText);
-	// },
-	// error : function(xhr, ajaxOptions, thrownError) {
-	// }
-	// });
+	$.ajax({
+		type : "GET",
+		url : "https://www.googleapis.com/language/translate/v2?key="+translateKey+"&source=en&target=de&q=Hello",
+		dataType : 'jsonp',
+		cache : false,
+		contentType : "application/x-www-form-urlencoded; charset=UTF-8",
+		//data : "key="+translateKey+"&source=en&target=de&q=Hello",
+		success : function(res) {
+			console.log('res', res.data.translations[0].translatedText);
+		},
+		error : function(xhr, ajaxOptions, thrownError) {
+			console.log("AJAX error :" + errorThrown);
+		}
+	});
 
 	$.get("https://www.googleapis.com/language/translate/v2", {
 		key : translateKey,
@@ -109,7 +107,7 @@ function translateText(text) {
 	}, function(res) {
 		console.log(res.data.translations[0].translatedText);
 	}, "json").fail(function(jqXHR, textStatus, errorThrown) {
-		alert("error :" + errorThrown);
+		console.log("GET error :" + errorThrown);
 	});
 }
 
@@ -141,65 +139,65 @@ function getZodiac(day, month) {
 	}
 }
 
-/*
+/* 
  No. Language Name   Native Language Name    Code
 
- 1   Afrikaans   Afrikaans           af
- 2   Albanian    Shqip                   sq
- 3   Arabic          عربي            ar
- 4   Armenian    Հայերէն                 hy
- 5   Azerbaijani آذربایجان دیلی          az
- 6   Basque          Euskara                 eu
- 7   Belarusian  Беларуская          be
- 8   Bulgarian   Български           bg
- 9   Catalan         Català                  ca
- 10  Chinese (Simp.) 中文简体                    zh-CN
- 11  Chinese (Trad.) 中文繁體                    zh-TW
- 12  Croatian    Hrvatski            hr
- 13  Czech           Čeština                 cs
- 14  Danish          Dansk                   da
- 15  Dutch           Nederlands          nl
- 16  English         English                 en
- 17  Estonian    Eesti keel          et
- 18  Filipino    Filipino            tl
- 19  Finnish         Suomi                   fi
- 20  French          Français            fr
- 21  Galician    Galego                  gl
- 22  Georgian    ქართული         ka
- 23  German          Deutsch                 de
- 24  Greek           Ελληνικά            el
- 25  Haitian Creole  Kreyòl ayisyen          ht
- 26  Hebrew          עברית                   iw
- 27  Hindi             हिन्दी                       hi
- 28  Hungarian   Magyar                  hu
- 29  Icelandic   Íslenska            is
- 30  Indonesian  Bahasa Indonesia    id
- 31  Irish           Gaeilge             ga
- 32  Italian     Italiano            it
- 33  Japanese    日本語             ja
- 34  Korean      한국어                 ko
- 35  Latvian     Latviešu            lv
- 36  Lithuanian  Lietuvių kalba      lt
- 37  Macedonian  Македонски          mk
- 38  Malay       Malay               ms
- 39  Maltese     Malti               mt
- 40  Norwegian   Norsk               no
- 41  Persian     فارسی               fa
- 42  Polish      Polski              pl
- 43  Portuguese  Português           pt
- 44  Romanian    Română              ro
- 45  Russian     Русский             ru
- 46  Serbian     Српски              sr
- 47  Slovak          Slovenčina          sk
- 48  Slovenian   Slovensko           sl
- 49  Spanish     Español             es
- 50  Swahili     Kiswahili           sw
- 51  Swedish     Svenska             sv
- 52      Thai            ไทย                     th
- 53  Turkish     Türkçe              tr
- 54  Ukrainian   Українська          uk
- 55  Urdu        اردو                    ur
- 56  Vietnamese  Tiếng Việt          vi
- 57  Welsh       Cymraeg             cy
- 58  Yiddish     ייִדיש                  yi
- */
+1   Afrikaans   Afrikaans           af
+2   Albanian    Shqip                   sq
+3   Arabic          عربي            ar
+4   Armenian    Հայերէն                 hy
+5   Azerbaijani آذربایجان دیلی          az
+6   Basque          Euskara                 eu
+7   Belarusian  Беларуская          be
+8   Bulgarian   Български           bg
+9   Catalan         Català                  ca
+10  Chinese (Simp.) 中文简体                    zh-CN
+11  Chinese (Trad.) 中文繁體                    zh-TW
+12  Croatian    Hrvatski            hr
+13  Czech           Čeština                 cs
+14  Danish          Dansk                   da
+15  Dutch           Nederlands          nl
+16  English         English                 en
+17  Estonian    Eesti keel          et
+18  Filipino    Filipino            tl
+19  Finnish         Suomi                   fi
+20  French          Français            fr
+21  Galician    Galego                  gl
+22  Georgian    ქართული         ka
+23  German          Deutsch                 de
+24  Greek           Ελληνικά            el
+25  Haitian Creole  Kreyòl ayisyen          ht
+26  Hebrew          עברית                   iw
+27  Hindi             हिन्दी                       hi
+28  Hungarian   Magyar                  hu
+29  Icelandic   Íslenska            is
+30  Indonesian  Bahasa Indonesia    id
+31  Irish           Gaeilge             ga
+32  Italian     Italiano            it
+33  Japanese    日本語             ja
+34  Korean      한국어                 ko
+35  Latvian     Latviešu            lv
+36  Lithuanian  Lietuvių kalba      lt
+37  Macedonian  Македонски          mk
+38  Malay       Malay               ms
+39  Maltese     Malti               mt
+40  Norwegian   Norsk               no
+41  Persian     فارسی               fa
+42  Polish      Polski              pl
+43  Portuguese  Português           pt
+44  Romanian    Română              ro
+45  Russian     Русский             ru
+46  Serbian     Српски              sr
+47  Slovak          Slovenčina          sk
+48  Slovenian   Slovensko           sl
+49  Spanish     Español             es
+50  Swahili     Kiswahili           sw
+51  Swedish     Svenska             sv
+52      Thai            ไทย                     th
+53  Turkish     Türkçe              tr
+54  Ukrainian   Українська          uk
+55  Urdu        اردو                    ur
+56  Vietnamese  Tiếng Việt          vi
+57  Welsh       Cymraeg             cy
+58  Yiddish     ייִדיש                  yi 
+*/

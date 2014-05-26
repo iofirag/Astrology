@@ -9,26 +9,21 @@ function getIpLocation() {
 		longitude= response.loc.substring(0,response.loc.indexOf(","));
 		latitude=response.loc.substring(response.loc.indexOf(",")+1,response.loc.length);
 		console.log("IP location - " + longitude+" "+latitude);
+		getCountryName(longitude,latitude);
 	}, "jsonp");
-	getCountryName();
 }
 function getLocation() {
-	if (navigator.geolocation) {
-		navigator.geolocation.watchPosition(showPosition, errorHandler);
-	} else {
-		getIpLocation(); //ip location
-		alert("Geolocation is not supported by this browser.");
-	}
+	navigator.geolocation.watchPosition(showPosition, errorHandler);
 }
 function showPosition(position) {
 	console.log("HTML5 position " + position.coords.latitude + " " + position.coords.longitude);
-	latitude = position.coords.latitude;
-	longitude = position.coords.longitude;
-	getCountryName();
+	longitude = position.coords.latitude;
+	latitude = position.coords.longitude;
+	getCountryName(longitude,latitude);
 }
-function getCountryName(){
+function getCountryName(longitude,latitude){
 	$.ajax({
-		url : 'http://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude + '&sensor=true',
+		url : 'http://maps.googleapis.com/maps/api/geocode/json?latlng='+longitude+','+latitude+'&sensor=true',
 		success : function(data) {
 			//console.log(data.results[0].formatted_address);
 			/*can also iterate the components for only the city and state*/
@@ -40,19 +35,19 @@ function getCountryName(){
 	}}}}});
 }
 function errorHandler(error) {
-	getIpLocation(); //ip location
 	switch(error.code) {
 		case error.PERMISSION_DENIED:
-			alert("User denied the request for Geolocation.");
+			//alert("User denied the request for Geolocation.");
 			break;
 		case error.POSITION_UNAVAILABLE:
-			alert("Location information is unavailable.");
+			//alert("Location information is unavailable.");
 			break;
 		case error.TIMEOUT:
-			alert("The request to get user location timed out.");
+			//alert("The request to get user location timed out.");
 			break;
 		case error.UNKNOWN_ERROR:
-			alert("An unknown error occurred.");
+			//alert("An unknown error occurred.");
 			break;
 	}
+	getIpLocation(); //ip location
 }
