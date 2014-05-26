@@ -19,7 +19,6 @@ var zodiacSigns = {
 
 $(document).ready(function() {
 	initDatePicker();
-	//separateDatePickerValues();
 });
 
 function initDatePicker() {
@@ -29,24 +28,17 @@ function initDatePicker() {
 	currYear = now.getFullYear();
 	today = (currYear) + "-" + (currMonth) + "-" + (currDay);
 	$('#date').val(today);
-	if (currDay < 10)// day
-		currDay = parseInt("10", currDay);
-	if (currMonth < 10)// month
-		currMonth = parseInt("10", currMonth);
-	//alert(currDay);alert(currMonth);alert(currYear);
+	if (currDay < 10)currDay = parseInt("10", currDay);// day
+	if (currMonth < 10)currMonth = parseInt("10", currMonth);// month
 }
 
 function separateDatePickerValues() {
 	date = $('#date').val().split("-");
-	date[0] = new Date().getFullYear();
-	// year
-	if (date[1] < 10)// day
-		date[1] = parseInt("10", date[1]);
-	if (date[2] < 10)// month
-		date[2] = parseInt("10", date[2]);
+	date[0] = new Date().getFullYear(); // year
+	if (date[1] < 10)date[1] = parseInt("10", date[1]);// day
+	if (date[2] < 10)date[2] = parseInt("10", date[2]);// month
 	xmlLoader();
-	return false;
-	// should be TRUE to procceed
+	return false;// should be TRUE to procceed
 }
 
 function xmlLoader() {
@@ -68,19 +60,15 @@ function xmlLoader() {
 					console.log(JSONConvertedXML.channel.item[i].description);
 					translateText(JSONConvertedXML.channel.item[i].description);
 					break;
-				}
-			}
-		}
-	});
+	}}}});
 }
 var translateKey = "AIzaSyAwBnKumEHtOPQiV0Z40hGGVCtA4BIPtjQ";
 function translateText(text) { 
-
 	$.ajax({
 		url : "http://ajaxhttpheaders.appspot.com",
 		dataType : 'jsonp',
 		success : function(headers) {
-			language = headers['Accept-Language'];
+			browsrLanguage = headers['Accept-Language'];
 			//console.log("browser language"+language);
 		}
 	});
@@ -112,31 +100,18 @@ function translateText(text) {
 }
 
 function getZodiac(day, month) {
-	if ((month == 1 && day <= 20) || (month == 12 && day >= 22)) {
-		return zodiacSigns.capricorn;
-	} else if ((month == 1 && day >= 21) || (month == 2 && day <= 18)) {
-		return zodiacSigns.aquarius;
-	} else if ((month == 2 && day >= 19) || (month == 3 && day <= 20)) {
-		return zodiacSigns.pisces;
-	} else if ((month == 3 && day >= 21) || (month == 4 && day <= 20)) {
-		return zodiacSigns.aries;
-	} else if ((month == 4 && day >= 21) || (month == 5 && day <= 20)) {
-		return zodiacSigns.taurus;
-	} else if ((month == 5 && day >= 21) || (month == 6 && day <= 20)) {
-		return zodiacSigns.gemini;
-	} else if ((month == 6 && day >= 22) || (month == 7 && day <= 22)) {
-		return zodiacSigns.cancer;
-	} else if ((month == 7 && day >= 23) || (month == 8 && day <= 23)) {
-		return zodiacSigns.leo;
-	} else if ((month == 8 && day >= 24) || (month == 9 && day <= 23)) {
-		return zodiacSigns.virgo;
-	} else if ((month == 9 && day >= 24) || (month == 10 && day <= 23)) {
-		return zodiacSigns.libra;
-	} else if ((month == 10 && day >= 24) || (month == 11 && day <= 22)) {
-		return zodiacSigns.scorpio;
-	} else if ((month == 11 && day >= 23) || (month == 12 && day <= 21)) {
-		return zodiacSigns.sagittarius;
-	}
+	if ((month == 1 && day <= 20) || (month == 12 && day >= 22)) {return zodiacSigns.capricorn;
+	} else if ((month == 1 && day >= 21) || (month == 2 && day <= 18)) {return zodiacSigns.aquarius;
+	} else if ((month == 2 && day >= 19) || (month == 3 && day <= 20)) {return zodiacSigns.pisces;
+	} else if ((month == 3 && day >= 21) || (month == 4 && day <= 20)) {return zodiacSigns.aries;
+	} else if ((month == 4 && day >= 21) || (month == 5 && day <= 20)) {return zodiacSigns.taurus;
+	} else if ((month == 5 && day >= 21) || (month == 6 && day <= 20)) {return zodiacSigns.gemini;
+	} else if ((month == 6 && day >= 22) || (month == 7 && day <= 22)) {return zodiacSigns.cancer;
+	} else if ((month == 7 && day >= 23) || (month == 8 && day <= 23)) {return zodiacSigns.leo;
+	} else if ((month == 8 && day >= 24) || (month == 9 && day <= 23)) {return zodiacSigns.virgo;
+	} else if ((month == 9 && day >= 24) || (month == 10 && day <= 23)) {return zodiacSigns.libra;
+	} else if ((month == 10 && day >= 24) || (month == 11 && day <= 22)) {return zodiacSigns.scorpio;
+	} else if ((month == 11 && day >= 23) || (month == 12 && day <= 21)) {return zodiacSigns.sagittarius;}
 }
 
 /* 
