@@ -60,7 +60,9 @@ function xmlLoader() {
 					console.log('title',JSONConvertedXML.channel.item[i].title);
 					console.log('astrology',JSONConvertedXML.channel.item[i].description);
 					currAstrology=JSONConvertedXML.channel.item[i].description;
-					document.getElementById('astrology').innerHTML = zodiac+"<br>"+currAstrology;
+					$('#astrology').html('');
+					$('#astrology').append("<p>"+zodiac+"</p>");
+					$('#astrology').append("<p>"+currAstrology+"</p>");
 					translateText(currAstrology);
 					break;
 	}}}});
