@@ -6,21 +6,23 @@
 		<script type="text/javascript" src="includes/js/jquery-1.8.3.min.js"></script>
 		<script type="text/javascript" src="http://l2.io/ip.js?var=myip"></script>
 		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-		<!-- page js & css -->
+		<!-- page js -->
 		<script src="includes/js/location.js"></script>
 		<script src="includes/js/astrology.js"></script>
 		<script type="text/javascript" src="includes/js/crossDomain/jquery.xdomainajax.js"></script><!-- cross domain for astrology-->
 		<script type="text/javascript" src="includes/js/crossDomain/xml2json.js"></script><!-- cross domain for astrology-->
+		<!-- page css -->
+		<link rel="stylesheet"  href="includes/css/index.css" />
 	</head>
 	<body>
 		<div id="wrapper">
-			<form action="#" method="get" onsubmit="return separateDatePickerValues()">
-				<!-- see function details 'return true' -->
+			<form id="dateForm" action="astrology.html" method="get" onsubmit="return separateDatePickerValues()"> <!-- see function details 'return true' -->
 				<label for="date">Enter your birth date:
 					<input id="date" type="date" name="date" required>
 				</label>
 				<input id="submit" type="submit"  name="submit" value="Send">
 			</form>
+			<article id="astrology"> </article>
 		</div>
 	</body>
 </html>

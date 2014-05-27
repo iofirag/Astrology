@@ -1,4 +1,5 @@
-var date;
+var datePicker;
+var currAstrology;
 var currDay;
 var currMonth;
 var currYear;
@@ -33,10 +34,10 @@ function initDatePicker() {
 }
 
 function separateDatePickerValues() {
-	date = $('#date').val().split("-");
-	date[0] = new Date().getFullYear(); // year
-	if (date[1] < 10)date[1] = parseInt("10", date[1]);// day
-	if (date[2] < 10)date[2] = parseInt("10", date[2]);// month
+	datePicker = $('#date').val().split("-");
+	datePicker[0] = new Date().getFullYear(); // year
+	if (datePicker[1] < 10)datePicker[1] = parseInt("10", datePicker[1]);// day
+	if (datePicker[2] < 10)datePicker[2] = parseInt("10", datePicker[2]);// month
 	xmlLoader();
 	return false;// should be TRUE to procceed
 }
@@ -52,13 +53,15 @@ function xmlLoader() {
 			// This is the part xml2Json comes in.
 			var JSONConvertedXML = $.xml2json(myXML);
 			//console.log(JSONConvertedXML);
-			var zodiac = getZodiac(date[2], date[1]);
+			var zodiac = getZodiac(datePicker[2], datePicker[1]);
 			// return the zodiac sign
 			for (var i = 0; i < JSONConvertedXML.channel.item.length; i++) {
 				if (JSONConvertedXML.channel.item[i].title.indexOf(zodiac) != -1) {
-					console.log(JSONConvertedXML.channel.item[i].title);
-					console.log(JSONConvertedXML.channel.item[i].description);
-					translateText(JSONConvertedXML.channel.item[i].description);
+					console.log('title',JSONConvertedXML.channel.item[i].title);
+					console.log('astrology',JSONConvertedXML.channel.item[i].description);
+					currAstrology=JSONConvertedXML.channel.item[i].description;
+					document.getElementById('astrology').innerHTML = zodiac+"<br>"+currAstrology;
+					translateText(currAstrology);
 					break;
 	}}}});
 }
@@ -70,12 +73,12 @@ function translateText(text) {
 		dataType : 'jsonp',
 		success : function(headers) {
 			browsrLanguage = headers['Accept-Language'].substring(0,2);
-			//console.log('browser language',browsrLanguage);
+			console.log('browser language',browsrLanguage);
 		}
 	});
-	//translateByAjax();
+	//translateByAjax(text);
 }
-function translateByAjax(){
+function translateByAjax(text){
  	$.ajax({
 		type : "GET",
 		url : "https://www.googleapis.com/language/translate/v2?key="+translateKey+"&source=en&target=de&q=Hello",
