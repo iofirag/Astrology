@@ -62,17 +62,21 @@ function xmlLoader() {
 					break;
 	}}}});
 }
-var translateKey = "AIzaSyAwBnKumEHtOPQiV0Z40hGGVCtA4BIPtjQ";
+var translateKey = "AIzaSyDfOz-UPBbBZFd1S3Qmfo_FPyP-P1lx_Z8";
 function translateText(text) { 
+	var browsrLanguage;
 	$.ajax({
 		url : "http://ajaxhttpheaders.appspot.com",
 		dataType : 'jsonp',
 		success : function(headers) {
-			browsrLanguage = headers['Accept-Language'];
-			//console.log("browser language"+language);
+			browsrLanguage = headers['Accept-Language'].substring(0,2);
+			//console.log('browser language',browsrLanguage);
 		}
 	});
-	$.ajax({
+	//translateByAjax();
+}
+function translateByAjax(){
+ 	$.ajax({
 		type : "GET",
 		url : "https://www.googleapis.com/language/translate/v2?key="+translateKey+"&source=en&target=de&q=Hello",
 		dataType : 'jsonp',
@@ -97,8 +101,7 @@ function translateText(text) {
 	}, "json").fail(function(jqXHR, textStatus, errorThrown) {
 		console.log("GET error :" + errorThrown);
 	});
-}
-
+ }
 function getZodiac(day, month) {
 	if ((month == 1 && day <= 20) || (month == 12 && day >= 22)) {return zodiacSigns.capricorn;
 	} else if ((month == 1 && day >= 21) || (month == 2 && day <= 18)) {return zodiacSigns.aquarius;
