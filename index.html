@@ -8,10 +8,6 @@
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
 		<script type="text/javascript" src="http://l2.io/ip.js?var=myip"></script>
 		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-		<!-- statistict -->
-		<script src="http://code.highcharts.com/highcharts.js"></script>
-		<script src="http://code.highcharttable.org/master/jquery.highchartTable-min.js"></script>
-		<script src="includes/js/statistics/statistics.js" type="text/javascript"></script>
 		<!-- page js & css -->
 		<script src="includes/js/location.js"></script>
 		<script src="includes/js/astrology.js"></script>
@@ -35,7 +31,7 @@
 						<label for="date">
 							<input id="date" placeholder="Date Of Birth" type="text" onfocus="(this.type='date')" onclick="initDatePicker();" required>
 						</label>
-						<a id="submit" href="#" data-role="button" data-inline="true" onclick="separateDatePickerValues()">L O G I N</a>
+						<a id="submit" href="#" data-role="button" onclick="separateDatePickerValues()">L O G I N</a>
 					</form>
 				</div>
 			</div>
@@ -48,24 +44,6 @@
 			</div>
 			<div data-role="page"  id="page_statistics">
 				<div data-role="content">
-					<table class="highchart" data-graph-container-before="1" data-graph-type="pie">
-						<thead>
-							<tr>
-								<th>true</th>
-								<th>false</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>true</td>
-								<td>80000</td>
-							</tr>
-							<tr>
-								<td>false</td>
-								<td>12000</td>
-							</tr>
-						</tbody>
-					</table>
 					<a href="#page_astrology">Go Back</a>
 				</div>
 			</div>
