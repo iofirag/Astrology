@@ -8,11 +8,12 @@
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
 		<script type="text/javascript" src="http://l2.io/ip.js?var=myip"></script>
 		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-		<!-- import jquery mobile -->
-
+		<!-- statistict -->
+        <script src="includes/js/statistics/statistics.js" type="text/javascript"></script>
 		<!-- page js & css -->
 		<script src="includes/js/location.js"></script>
 		<script src="includes/js/astrology.js"></script>
+		<script src="includes/js/database.js"></script>
 		<script type="text/javascript" src="includes/js/crossDomain/jquery.xdomainajax.js"></script><!-- cross domain for astrology-->
 		<script type="text/javascript" src="includes/js/crossDomain/xml2json.js"></script><!-- cross domain for astrology-->
 		<link rel="stylesheet" href="includes/css/index.css" />
@@ -32,7 +33,7 @@
 						<label for="date">
 							<input id="date" placeholder="Date Of Birth" type="text" onfocus="(this.type='date')" onclick="initDatePicker();" required> 
 						</label>
-						<a id="submit" href="#" data-role="button" data-inline="true" onclick="separateDatePickerValues()">Go to Page Two</a>
+						<a id="submit" href="#" data-role="button" data-inline="true" onclick="separateDatePickerValues()">L O G I N</a>
 					</form>
 				</div>
 			</div>
@@ -40,7 +41,13 @@
 			<div data-role="page"  id="pagetwo">
 				<div data-role="content">
 					<article id="astrology"> </article>
-					<a href="#pageone">Go to Page One</a>
+					<a href="#pagethree">Go Forward</a>
+				</div>
+			</div>
+			<div data-role="page"  id="pagethree">
+				<div data-role="content">
+					
+					<a href="#pagetwo">Go Back</a>
 				</div>
 			</div>
 		</div>
