@@ -1,12 +1,4 @@
 var database = [];
-<<<<<<< HEAD
-function createUser (fullName,email,date,time){
- profile = {
- 	name : fullName,
- 	email : email,
- 	date : date,
- 	time : time
-=======
 function User (fullName,email,date,time,like,country){
  var profile = {
  	name : fullName,
@@ -15,7 +7,6 @@ function User (fullName,email,date,time,like,country){
  	time : time,
  	like : like,
  	country : country
->>>>>>> d38d78d54ded39652aef3305605e5febe6bee4a1
 	};
 return profile;
 }
@@ -59,7 +50,3 @@ function getStatistics(){
 	statisticsLike.push(yes);
 	statisticsLike.push(no);
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> d38d78d54ded39652aef3305605e5febe6bee4a1
