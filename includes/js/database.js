@@ -41,6 +41,7 @@ function addToDb(obj){
 }
 var statisticsLike = [];
 function getStatistics(){
+	statisticsLike = [];
 	var yes =0;
 	var no =0;
 	database.forEach(function (obj){
@@ -49,4 +50,6 @@ function getStatistics(){
 	});
 	statisticsLike.push(yes);
 	statisticsLike.push(no);
+	$("#graph").html('');
+	$("#graph").append("<p> Has Like: "+statisticsLike[0]+"<br> Has unlike: "+statisticsLike[1]+"</p>");
 }
