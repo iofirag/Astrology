@@ -31,6 +31,7 @@ function initDatePicker() {
 	$('#date').val(today);
 	if (currDay < 10)currDay = parseInt("10", currDay);// day
 	if (currMonth < 10)currMonth = parseInt("10", currMonth);// month
+	$("#submit").attr("href", "#pagetwo");
 }
 
 function separateDatePickerValues() {
@@ -39,7 +40,6 @@ function separateDatePickerValues() {
 	if (datePicker[1] < 10)datePicker[1] = parseInt("10", datePicker[1]);// day
 	if (datePicker[2] < 10)datePicker[2] = parseInt("10", datePicker[2]);// month
 	xmlLoader();
-	return true;// should be TRUE to procceed
 }
 
 function xmlLoader() {
