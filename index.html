@@ -9,7 +9,9 @@
 		<script type="text/javascript" src="http://l2.io/ip.js?var=myip"></script>
 		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
 		<!-- statistict -->
-        <script src="includes/js/statistics/statistics.js" type="text/javascript"></script>
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+		<script src="http://code.highcharttable.org/master/jquery.highchartTable-min.js"></script>
+		<script src="includes/js/statistics/statistics.js" type="text/javascript"></script>
 		<!-- page js & css -->
 		<script src="includes/js/location.js"></script>
 		<script src="includes/js/astrology.js"></script>
@@ -21,7 +23,7 @@
 
 	<body>
 		<div id="wrapper">
-			<div data-role="page" id="pageone">
+			<div data-role="page" id="page_home">
 				<div data-role="content">
 					<form id="details_form">
 						<label for="full_name">
@@ -31,23 +33,40 @@
 							<input id="email" type="email" name="email" placeholder="Email">
 						</label>
 						<label for="date">
-							<input id="date" placeholder="Date Of Birth" type="text" onfocus="(this.type='date')" onclick="initDatePicker();" required> 
+							<input id="date" placeholder="Date Of Birth" type="text" onfocus="(this.type='date')" onclick="initDatePicker();" required>
 						</label>
 						<a id="submit" href="#" data-role="button" data-inline="true" onclick="separateDatePickerValues()">L O G I N</a>
 					</form>
 				</div>
 			</div>
 
-			<div data-role="page"  id="pagetwo">
+			<div data-role="page"  id="page_astrology">
 				<div data-role="content">
-					<article id="astrology"> </article>
-					<a href="#pagethree">Go Forward</a>
+					<article id="astrology"></article>
+					<a href="#page_statistics">Go Forward</a>
 				</div>
 			</div>
-			<div data-role="page"  id="pagethree">
+			<div data-role="page"  id="page_statistics">
 				<div data-role="content">
-					
-					<a href="#pagetwo">Go Back</a>
+					<table class="highchart" data-graph-container-before="1" data-graph-type="pie">
+						<thead>
+							<tr>
+								<th>true</th>
+								<th>false</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>true</td>
+								<td>80000</td>
+							</tr>
+							<tr>
+								<td>false</td>
+								<td>12000</td>
+							</tr>
+						</tbody>
+					</table>
+					<a href="#page_astrology">Go Back</a>
 				</div>
 			</div>
 		</div>

@@ -6,3 +6,7 @@ function createUser (fullName, email,date){
  	date : date
 	};
 }
+
+$(document).ready(function() {
+  $('table.highchart').highchartTable();
+});

@@ -7,14 +7,17 @@ body {
 	display: block;
 	margin: auto;
 }
-#pageone #details_form {
+#page_home #details_form {
 	margin: auto;
 	text-align:left;
 	width: 75%;
 }
-#pagetwo #astrology{
+#page_astrology #astrology{
 	width: 75%;
 	margin: auto;
 	text-align: justify;
 	margin-top:20px;
+}
+.highchart{
+	display: none;
 }

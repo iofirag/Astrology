@@ -31,7 +31,7 @@ function initDatePicker() {
 	$('#date').val(today);
 	if (currDay < 10)currDay = parseInt("10", currDay);// day
 	if (currMonth < 10)currMonth = parseInt("10", currMonth);// month
-	$("#submit").attr("href", "#pagetwo");
+	$("#submit").attr("href", "#page_astrology");
 }
 
 function separateDatePickerValues() {
