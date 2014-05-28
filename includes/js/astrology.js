@@ -1,4 +1,6 @@
 var datePicker;
+var userName;
+var userEmail;
 var currAstrology;
 var currDay;
 var currMonth;
@@ -34,11 +36,13 @@ function initDatePicker() {
 	$("#submit").attr("href", "#page_astrology");
 }
 
-function separateDatePickerValues() {
+function validate_form() {
 	datePicker = $('#date').val().split("-");
-	datePicker[0] = new Date().getFullYear(); // year
+	datePicker[0]; // year
 	if (datePicker[1] < 10)datePicker[1] = parseInt("10", datePicker[1]);// day
 	if (datePicker[2] < 10)datePicker[2] = parseInt("10", datePicker[2]);// month
+	userName = $('#full_name').val();
+	userEmail= $('#email').val();
 	xmlLoader();
 }
 

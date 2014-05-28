@@ -1,5 +1,6 @@
 var latitude;
 var longitude;
+var userCountry;
 $(document).ready(function() {
 	getLocation(); //html5 location
 });
@@ -31,6 +32,7 @@ function getCountryName(longitude,latitude){
 				for ( j = 0; j < data.results[4].address_components[i].types.length; j++) {
 					if (data.results[4].address_components[i].types[j] == 'country') {
 						var country_code = data.results[4].address_components[i].long_name;
+						userCountry = country_code;
 						console.log('country_code',country_code);
 	}}}}});
 }
