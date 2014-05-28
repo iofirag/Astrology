@@ -1,18 +1,22 @@
-*{
-	margin:0;
-	padding:0;
+* {
+	margin: 0;
+	padding: 0;
 }
-body{
+body {
 	width: 100%;
-	text-align:center;
+	text-align: center;
 }
-#wrapper{
-	display:block;
+#wrapper {
+	display: block;
 	margin: auto;
 }
-#astrology{
-	width:80%;
-	margin:auto;
+#date_form {
+	width: 100%;
+	margin: auto;
+}
+#astrology {
+	width: 75%;
+	margin: auto;
 	text-align: justify;
-	padding-top:10px;
+	padding-top: 10px;
 }
