@@ -18,6 +18,9 @@
 		<script type="text/javascript" src="includes/js/crossDomain/jquery.xdomainajax.js"></script><!-- cross domain for astrology-->
 		<script type="text/javascript" src="includes/js/crossDomain/xml2json.js"></script><!-- cross domain for astrology-->
 		<link rel="stylesheet" href="includes/css/index.css" />
+		
+		<!-- Graph -->
+		<script src="includes/js/Chart.js"></script>
 	</head>
 
 	<body>
@@ -49,7 +52,9 @@
 			
 			<div data-role="page"  id="page_statistics">
 				<div data-role="content" >
-					<article id="graph"> </article>
+					<article id="graph"> 
+						<canvas id="CanvasChart" width="400" height="400"></canvas>
+					</article>
 					<a href="#page_astrology">Go Back</a>
 				</div>
 			</div>
