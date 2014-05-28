@@ -78,35 +78,21 @@ function translateText(text) {
 			console.log('browser language',browsrLanguage);
 		}
 	});
-	//translateByAjax(text);
-}
-function translateByAjax(text){
- 	$.ajax({
-		type : "GET",
-		url : "https://www.googleapis.com/language/translate/v2?key="+translateKey+"&source=en&target=de&q=Hello",
-		dataType : 'jsonp',
-		cache : false,
-		contentType : "application/x-www-form-urlencoded; charset=UTF-8",
-		//data : "key="+translateKey+"&source=en&target=de&q=Hello",
+	$.ajax({
+		url : "http://avishay.eu5.org/?translate=true&text=hello&from=en&to=iw",
+		type : 'GET',
+		async: true,
+		dataType : 'text',
+		//contentType: "application/x-www-form-urlencoded;charset=ISO-8859-15",
+		contentType: "charset=utf-8", 
 		success : function(res) {
-			console.log('res', res.data.translations[0].translatedText);
+			console.log('res', res);
 		},
 		error : function(xhr, ajaxOptions, thrownError) {
-			console.log("AJAX error :" + errorThrown);
+			console.log("php translate error");
 		}
-	});
-
-	$.get("https://www.googleapis.com/language/translate/v2", {
-		key : translateKey,
-		source : "en",
-		target : "fr",
-		q : "hello"
-	}, function(res) {
-		console.log(res.data.translations[0].translatedText);
-	}, "json").fail(function(jqXHR, textStatus, errorThrown) {
-		console.log("GET error :" + errorThrown);
-	});
- }
+	}); 
+}
 function getZodiac(day, month) {
 	if ((month == 1 && day <= 20) || (month == 12 && day >= 22)) {return zodiacSigns.capricorn;
 	} else if ((month == 1 && day >= 21) || (month == 2 && day <= 18)) {return zodiacSigns.aquarius;
