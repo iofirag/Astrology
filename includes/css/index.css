@@ -1,7 +1,4 @@
-* {
-	margin: 0;
-	padding: 0;
-}
+@import url(http://reset5.googlecode.com/hg/reset.min.css);
 body {
 	width: 100%;
 	text-align: center;
@@ -10,11 +7,11 @@ body {
 	display: block;
 	margin: auto;
 }
-#date_form {
-	width: 100%;
+#details_form {
+	text-align: center;
 	margin: auto;
 }
-#astrology {
+#astrology p {
 	width: 75%;
 	margin: auto;
 	text-align: justify;

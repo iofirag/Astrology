@@ -4,25 +4,45 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- imports -->
 		<script type="text/javascript" src="includes/js/jquery-1.8.3.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
 		<script type="text/javascript" src="http://l2.io/ip.js?var=myip"></script>
 		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-		<!-- page js -->
+		<!-- import jquery mobile -->
+
+		<!-- page js & css -->
 		<script src="includes/js/location.js"></script>
 		<script src="includes/js/astrology.js"></script>
 		<script type="text/javascript" src="includes/js/crossDomain/jquery.xdomainajax.js"></script><!-- cross domain for astrology-->
 		<script type="text/javascript" src="includes/js/crossDomain/xml2json.js"></script><!-- cross domain for astrology-->
-		<!-- page css -->
-		<link rel="stylesheet"  href="includes/css/index.css" />
+		<link rel="stylesheet" href="includes/css/index.css" />
 	</head>
+
 	<body>
 		<div id="wrapper">
-			<form id="date_form" action="astrology.html" method="get" onsubmit="return separateDatePickerValues()"> <!-- see function details 'return true' -->
-				<label for="date">Enter your birth date:
-					<input id="date" type="date" name="date" required>
-				</label>
-				<input id="submit" type="submit"  name="submit" value="Send">
-			</form>
-			<article id="astrology"> </article>
+			<div data-role="page" id="pageone">
+				<div data-role="content">
+					<form id="details_form">
+						<label for="full_name">Name:
+							<input id="full_name" type="text" name="full_name" placeholder="First / Last Name">
+						</label>
+						<label for="email">Email:
+							<input id="email" type="email" name="email" placeholder="Email">
+						</label>
+						<label for="date">Date:
+							<input placeholder="Date Of Birth" class="textbox-n" type="text" onfocus="(this.type='date')" onclick="initDatePicker();" id="date" required> 
+						</label>
+						<a href="#pagetwo" data-role="button none" data-inline="true" onclick="separateDatePickerValues()">Go to Page Two</a>
+					</form>
+				</div>
+			</div>
+
+			<div data-role="page"  id="pagetwo">
+				<div data-role="content">
+					<article id="astrology"> </article>
+					<a href="#pageone">Go to Page One</a>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
