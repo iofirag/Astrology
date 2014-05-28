@@ -19,7 +19,7 @@ var zodiacSigns = {
 };
 
 $(document).ready(function() {
-	initDatePicker();
+	//initDatePicker();
 });
 
 function initDatePicker() {
@@ -39,7 +39,7 @@ function separateDatePickerValues() {
 	if (datePicker[1] < 10)datePicker[1] = parseInt("10", datePicker[1]);// day
 	if (datePicker[2] < 10)datePicker[2] = parseInt("10", datePicker[2]);// month
 	xmlLoader();
-	return false;// should be TRUE to procceed
+	return true;// should be TRUE to procceed
 }
 
 function xmlLoader() {
