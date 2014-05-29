@@ -13,6 +13,9 @@ function User(fullName, email, date, time, like, country) {
 
 
 $(document).ready(function() {
+$( "#page_astrology a").bind( "click", function() {
+  addToDb(this);
+});
 	createLocalDB();
 });
 function createLocalDB() {
@@ -53,33 +56,22 @@ function addToDb(obj) {
 	getStatistics();
 }
 
+
+
 var statisticsLike = [];
 function getStatistics() {
 	statisticsLike = [];
 	var yes = 0;
 	var no = 0;
 	database.forEach(function(obj) {
-		if (obj.like)
-			yes++;
-		else
-			no++;
+		if (obj.like) yes++;
+		else no++;
 	});
 	statisticsLike.push(yes);
 	statisticsLike.push(no);
-
-	//add text
-	//$("#graph").html('');
-	//$("#graph").append("<p>Like: "+statisticsLike[0]+"<br> unlike: "+statisticsLike[1]+"</p>");
-
-	//Get context with jQuery - using jQuery's .get() method.
-	//var ctx = $("#CanvasChart").get(0).getContext("2d");
-
+	console.log("---Like---" + (statisticsLike[0]) + " ---Unlike---" + statisticsLike[1]);
 	draw_pie();
-	// or function draw_pie()
-	console.log("------Like---" + (statisticsLike[0]) + " ---Unlike--" + statisticsLike[1]);
-
 }
-
 function draw_pie() {
 	var pieData = [{
 		value : statisticsLike[0],
