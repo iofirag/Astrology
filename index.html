@@ -10,8 +10,6 @@
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
 		<script type="text/javascript" src="http://l2.io/ip.js?var=myip"></script>
 		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-		<!-- statistict -->
-		
 		<!-- page js & css -->
 		<script src="includes/js/location.js"></script>
 		<script src="includes/js/astrology.js"></script>
@@ -19,9 +17,11 @@
 		<script type="text/javascript" src="includes/js/crossDomain/jquery.xdomainajax.js"></script><!-- cross domain for astrology-->
 		<script type="text/javascript" src="includes/js/crossDomain/xml2json.js"></script><!-- cross domain for astrology-->
 		<link rel="stylesheet" href="includes/css/index.css" />
-		
-		<!-- Graph -->
-		<script src="includes/js/Chart.min.js"></script>
+		<!-- statistict -->
+		<script type="text/javascript" src="includes/js/graph/jquery.js"></script>
+		<script type="text/javascript" src="includes/js/graph/jquery.flot.js"></script>
+		<script type="text/javascript" src="includes/js/graph/jquery.flot.pie.js"></script>
+		<link href="includes/css/pie.css" rel="stylesheet" type="text/css">
 	</head>
 
 	<body>
@@ -53,9 +53,7 @@
 			
 			<div data-role="page"  id="page_statistics">
 				<div data-role="content" >
-					<article id="graph"> 
-						<canvas id="CanvasChart" width="100" height="100"> </canvas>
-					</article>
+					<div id="placeholder" class="demo-placeholder" style="margin: auto;text-align: center"> </div>
 					<a href="#page_astrology">Go Back</a>
 				</div>
 			</div>

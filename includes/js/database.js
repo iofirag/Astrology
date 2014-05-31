@@ -13,9 +13,9 @@ function User(fullName, email, date, time, like, country) {
 
 
 $(document).ready(function() {
-$( "#page_astrology a").bind( "click", function() {
-  addToDb(this);
-});
+	$("#page_astrology a").bind("click", function() {
+		addToDb(this);
+	});
 	createLocalDB();
 });
 function createLocalDB() {
@@ -56,29 +56,53 @@ function addToDb(obj) {
 	getStatistics();
 }
 
-
-
 var statisticsLike = [];
 function getStatistics() {
 	statisticsLike = [];
 	var yes = 0;
 	var no = 0;
 	database.forEach(function(obj) {
-		if (obj.like) yes++;
-		else no++;
+		if (obj.like)
+			yes++;
+		else
+			no++;
 	});
 	statisticsLike.push(yes);
 	statisticsLike.push(no);
 	console.log("---Like---" + (statisticsLike[0]) + " ---Unlike---" + statisticsLike[1]);
 	draw_pie();
 }
-function draw_pie() {
-	var pieData = [{
-		value : statisticsLike[0],
-		color : "#FFFFFF"	//true
+
+function labelFormatter(label, series) {
+	return "<div style='font-size:8pt; text-align:center; padding:2px; color:white;'>" + label + "<br/>" + Math.round(series.percent) + "%</div>";
+}
+function draw_pie(){
+	data = [{
+		label : "True",
+		data : statisticsLike[0]
 	}, {
-		value : statisticsLike[1],
-		color : "#00dfff"	//false
+		label : "False",
+		data : statisticsLike[1]
 	}];
-	var myPie = new Chart(document.getElementById("CanvasChart").getContext("2d")).Pie(pieData);
+	
+		$.plot(placeholder, data, {
+		series : {
+			pie : {
+				show : true,
+				radius : 1,
+				label : {
+					show : true,
+					radius : 2 / 3,
+					formatter : labelFormatter,
+					threshold : 0.1
+				}
+			}
+		},
+		legend : {
+			show : false
+		}
+	});
+
+	setCode(["$.plot('#placeholder', data, {", "    series: {", "        pie: {", "            show: true,", "            radius: 1,", "            label: {", "                show: true,", "                radius: 2/3,", "                formatter: labelFormatter,", "                threshold: 0.1", "            }", "        }", "    },", "    legend: {", "        show: false", "    }", "});"]);
+
 }
