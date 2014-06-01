@@ -24,6 +24,9 @@ $(document).ready(function() {
 	$('#page_astrology a').bind('click',function(){
 		addToDb(this);
 	});
+	$('#page_home #submit').bind('click',function(){
+		validate_form();
+	});
 });
 
 function initDatePicker() {

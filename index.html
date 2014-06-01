@@ -12,6 +12,7 @@
 		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
 		<!-- statistics -->
 		<script src="includes/js/Chart.min.js"></script>
+		<script src="includes/js/graph.js"></script>
 		<!-- page js & css -->
 		<script src="includes/js/location.js"></script>
 		<script src="includes/js/astrology.js"></script>
@@ -48,7 +49,7 @@
 						<label for="date">
 							<input id="date" placeholder="Date Of Birth" type="text" onfocus="(this.type='date')" onclick="initDatePicker();" required>
 						</label>
-						<a id="submit" href="#" data-role="button" onclick="validate_form()">L O G I N</a>
+						<a id="submit" href="#" data-role="button">L O G I N</a>
 					</form>
 				</div>
 			</div>
@@ -56,8 +57,8 @@
 			<div data-role="page"  id="page_astrology">
 				<div data-role="content">
 					<article id="astrology"> </article>
-					<a href="#page_statistics">true</a>
-					<a href="#page_statistics">false</a>
+					<a href="#page_statistics" data-role="button">true</a>
+					<a href="#page_statistics" data-role="button">false</a>
 				</div>
 			</div>
 			
