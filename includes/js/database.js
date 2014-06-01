@@ -44,9 +44,9 @@ function addToDb(obj) {
 		datePicker[2] = now.getMonth() + 1;
 		datePicker[1] = now.getDate();
 		if (datePicker[2] < 10)
-			datePicker[2] = parseInt("10", datePicker[2]);
+			datePicker[2] = parseInt(datePicker[2],10 );
 		if (datePicker[1] < 10)
-			datePicker[1] = parseInt("10", datePicker[1]);
+			datePicker[1] = parseInt(datePicker[1],10 );
 	}
 	database.push(User(userName, userEmail, datePicker, new Date().getHours(), JSON.parse("["+obj.innerHTML+"]")[0], userCountry));
 	console.table(database);
@@ -66,18 +66,8 @@ function getStatistics() {
 	});
 	statisticsLike.push(yes);
 	statisticsLike.push(no);
-
-	//add text
-	//$("#graph").html('');
-	//$("#graph").append("<p>Like: "+statisticsLike[0]+"<br> unlike: "+statisticsLike[1]+"</p>");
-
-	//Get context with jQuery - using jQuery's .get() method.
-	//var ctx = $("#CanvasChart").get(0).getContext("2d");
-
 	draw_pie();
-	// or function draw_pie()
 	console.log("------Like---" + (statisticsLike[0]) + " ---Unlike--" + statisticsLike[1]);
-
 }
 
 function draw_pie() {

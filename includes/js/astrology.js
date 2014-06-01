@@ -31,16 +31,16 @@ function initDatePicker() {
 	currYear = now.getFullYear();
 	today = (currYear) + "-" + (currMonth) + "-" + (currDay);
 	$('#date').val(today);
-	if (currDay < 10)currDay = parseInt("10", currDay);// day
-	if (currMonth < 10)currMonth = parseInt("10", currMonth);// month
+	if (currDay < 10)currDay = parseInt(currDay,10 );// day
+	if (currMonth < 10)currMonth = parseInt(currMonth,10 );// month
 	$("#submit").attr("href", "#page_astrology");
 }
 
 function validate_form() {
 	datePicker = $('#date').val().split("-");
 	datePicker[0]; // year
-	if (datePicker[1] < 10)datePicker[1] = parseInt("10", datePicker[1]);// day
-	if (datePicker[2] < 10)datePicker[2] = parseInt("10", datePicker[2]);// month
+	if (datePicker[1] < 10)datePicker[1] = parseInt(datePicker[1],10 );// day
+	if (datePicker[2] < 10)datePicker[2] = parseInt(datePicker[2],10 );// month
 	userName = $('#full_name').val();
 	userEmail= $('#email').val();
 	xmlLoader();
