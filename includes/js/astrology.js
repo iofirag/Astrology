@@ -21,7 +21,9 @@ var zodiacSigns = {
 };
 
 $(document).ready(function() {
-	//initDatePicker();
+	$('#page_astrology a').bind('click',function(){
+		addToDb(this);
+	});
 });
 
 function initDatePicker() {
