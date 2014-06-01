@@ -23,10 +23,18 @@ var zodiacSigns = {
 $(document).ready(function() {
 	$('#page_astrology a').bind('click',function(){
 		addToDb(this);
-	});
-	$('#page_home #submit').bind('click',function(){
+	}),
+	$('#details_form #submit').bind('click',function(){
 		validate_form();
+	}),
+	$('#details_form #date').bind('click',function(){
+		initDatePicker();
+		$('#details_form #date').unbind('click');
+	}),
+	$('#details_form #date').bind('focus',function(){
+		this.type='date';
 	});
+	
 });
 
 function initDatePicker() {
