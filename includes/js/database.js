@@ -13,9 +13,6 @@ function User(fullName, email, date, time, like, country) {
 
 
 $(document).ready(function() {
-	$("#page_astrology a").bind("click", function() {
-		addToDb(this);
-	});
 	createLocalDB();
 });
 function createLocalDB() {
@@ -69,40 +66,27 @@ function getStatistics() {
 	});
 	statisticsLike.push(yes);
 	statisticsLike.push(no);
-	console.log("---Like---" + (statisticsLike[0]) + " ---Unlike---" + statisticsLike[1]);
+
+	//add text
+	//$("#graph").html('');
+	//$("#graph").append("<p>Like: "+statisticsLike[0]+"<br> unlike: "+statisticsLike[1]+"</p>");
+
+	//Get context with jQuery - using jQuery's .get() method.
+	//var ctx = $("#CanvasChart").get(0).getContext("2d");
+
 	draw_pie();
+	// or function draw_pie()
+	console.log("------Like---" + (statisticsLike[0]) + " ---Unlike--" + statisticsLike[1]);
+
 }
 
-function labelFormatter(label, series) {
-	return "<div style='font-size:8pt; text-align:center; padding:2px; color:white;'>" + label + "<br/>" + Math.round(series.percent) + "%</div>";
-}
-function draw_pie(){
-	data = [{
-		label : "True",
-		data : statisticsLike[0]
+function draw_pie() {
+	var pieData = [{
+		value : statisticsLike[0],
+		color : "#FFFFFF"	//true
 	}, {
-		label : "False",
-		data : statisticsLike[1]
+		value : statisticsLike[1],
+		color : "#00dfff"	//false
 	}];
-	
-		$.plot(placeholder, data, {
-		series : {
-			pie : {
-				show : true,
-				radius : 1,
-				label : {
-					show : true,
-					radius : 2 / 3,
-					formatter : labelFormatter,
-					threshold : 0.1
-				}
-			}
-		},
-		legend : {
-			show : false
-		}
-	});
-
-	setCode(["$.plot('#placeholder', data, {", "    series: {", "        pie: {", "            show: true,", "            radius: 1,", "            label: {", "                show: true,", "                radius: 2/3,", "                formatter: labelFormatter,", "                threshold: 0.1", "            }", "        }", "    },", "    legend: {", "        show: false", "    }", "});"]);
-
+	var myPie = new Chart(document.getElementById("CanvasChart").getContext("2d")).Pie(pieData);
 }

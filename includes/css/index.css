@@ -8,17 +8,16 @@ body {
 }
 #page_home #details_form {
 	margin: auto;
-	text-align: left;
+	text-align:left;
 	width: 75%;
 }
-#page_astrology #astrology {
+#page_astrology #astrology{
 	width: 75%;
 	margin: auto;
 	text-align: justify;
-	margin-top: 20px;
+	margin-top:20px;
 }
-#page_statistics {
+#page_statistics{
 	width: 100%;
-	margin: auto;
+	margin:0px auto;
 }
-
