@@ -21,3 +21,7 @@ body {
 	width: 100%;
 	margin:0px auto;
 }
+#CanvasChart{
+	margin: auto;
+	text-align: center;
+}
