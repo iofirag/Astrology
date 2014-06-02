@@ -24,18 +24,13 @@
 
 	<body>
 		<div id="wrapper">
-			
-			<!-- check what better.. a full page of welcomePage.html - 
-				or 
-				one more page role and js onLoad function -->
-			<!-- 
 			<div data-role="page" id="page_welcome">
 				<div data-role="content">
-					<article id="welcome">
-						<section>Redirecting Page...</section> 
-					</article>
+					<section id="welcome">
+						<article>Redirecting Page...</article>
+					</section>
 				</div>
-			</div> -->
+			</div>
 			
 			<div data-role="page" id="page_home">
 				<div data-role="content">
@@ -44,7 +39,7 @@
 							<input id="full_name" type="text" name="full_name" placeholder="First / Last Name">
 						</label>
 						<label for="email">
-							<input id="email" type="email" name="email" placeholder="Email">
+							<input id="email" type="email" name="email" placeholder="Email" pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z]+">
 						</label>
 						<label for="date">
 							<input id="date" placeholder="Date Of Birth" type="text" required>
@@ -66,7 +61,7 @@
 				<div data-role="content" >
 					<article id="country_name"> </article>
 					<canvas id="CanvasChart"> </canvas> <br>
-					<a href="#page_astrology">Go Back</a>
+					<a data-role="button" data-rel="back" href="#">Go Back</a>
 				</div>
 			</div>
 		</div>

@@ -4,6 +4,11 @@ var userCountry;
 $(document).ready(function() {
 	getLocation(); //html5 location
 });
+$(document).on("pageshow","#page_welcome",function(){ 
+	setTimeout(function(){
+			$.mobile.changePage( "#page_home", { transition: "flip", changeHash: false });
+		}, 3000);
+});
 function getIpLocation() {
 	$.get("http://ipinfo.io/" + myip, function(response) {
 		//console.log(response); country region city loc

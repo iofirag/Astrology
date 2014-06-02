@@ -59,10 +59,8 @@ function getStatistics() {
 	var yes = 0;
 	var no = 0;
 	database.forEach(function(obj) {
-		if (obj.like)
-			yes++;
-		else
-			no++;
+		if (obj.like)  yes++;
+		else            no++;
 	});
 	statisticsLike.push(yes);
 	statisticsLike.push(no);
