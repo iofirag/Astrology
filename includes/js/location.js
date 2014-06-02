@@ -7,7 +7,6 @@ $(document).ready(function() {
 $(document).on("pageshow","#page_welcome",function(){ 
 	setTimeout(function(){
 			$.mobile.changePage( "#page_home", { transition: "flip", changeHash: false });
-			//$( "#page_welcome" ).remove();
 		}, 3000);
 });
 function getIpLocation() {
