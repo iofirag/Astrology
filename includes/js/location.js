@@ -2,16 +2,14 @@ var latitude;
 var longitude;
 var userCountry;
 $(document).ready(function() {
-	welcomePageShow();
 	getLocation(); //html5 location
 });
-function welcomePageShow(){
-	if ($.mobile.activePage[0].id.indexOf("page_welcome")!=-1){
-		setTimeout(function(){
-			$.mobile.changePage( "#page_home", { transition: "slideup", changeHash: false });
+$(document).on("pageshow","#page_welcome",function(){ 
+	setTimeout(function(){
+			$.mobile.changePage( "#page_home", { transition: "flip", changeHash: false });
+			//$( "#page_welcome" ).remove();
 		}, 3000);
-	}
-}
+});
 function getIpLocation() {
 	$.get("http://ipinfo.io/" + myip, function(response) {
 		//console.log(response); country region city loc
