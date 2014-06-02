@@ -6,6 +6,13 @@ body {
 	display: block;
 	margin: auto;
 }
+#page_welcome{
+	background: url('../images/screen1_desktop.jpg') no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
 #page_home #details_form {
 	margin: auto;
 	text-align:left;
