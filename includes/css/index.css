@@ -6,6 +6,7 @@ body {
 	display: block;
 	margin: auto;
 }
+<<<<<<< HEAD
 #page_welcome {
 	background: url('../images/welcome.jpg') no-repeat center fixed;
 	-webkit-background-size: cover;
@@ -25,6 +26,8 @@ body {
 	text-align: justify;
 	line-height:150%;
 }
+=======
+>>>>>>> 121f0dafe4f81fd2128dffd129e939adc16dc0cc
 #page_home #details_form {
 	margin: auto;
 	text-align: left;
@@ -62,6 +65,42 @@ body {
 	margin: 0px auto;
 }
 /*#CanvasChart{
- margin: auto;
- text-align: center;
- }*/
+	margin: auto;
+	text-align: center;
+	 margin: auto;
+ 	text-align: center;
+}*/
+
+
+
+
+
+@media only screen and (min-width:769px){	/*Desktop*/
+	#page_welcome{
+		background: url('../images/screen1_desktop.jpg') no-repeat center center fixed; 
+	  	-webkit-background-size: cover;
+	  	-moz-background-size: cover;
+	  	-o-background-size: cover;
+	  	background-size: cover;
+	}
+}
+
+@media only screen and (min-width:481px) and (max-width:768px){	    /*Tablet*/
+	#page_welcome{
+		background: url('../images/screen1_tablet.jpg') no-repeat center center fixed; 
+	  	-webkit-background-size: cover;
+	  	-moz-background-size: cover;
+	  	-o-background-size: cover;
+	  	background-size: cover;
+	}
+}
+
+@media only screen and (max-width:480px){	/*mobile*/
+	#page_welcome{
+		background: url('../images/screen1_mobile.jpg') no-repeat center center fixed; 
+	  	-webkit-background-size: cover;
+	  	-moz-background-size: cover;
+	  	-o-background-size: cover;
+	  	background-size: cover;
+	}
+}
