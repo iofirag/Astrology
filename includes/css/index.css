@@ -6,43 +6,47 @@ body {
 	display: block;
 	margin: auto;
 }
-#page_home #welcome_text{
+#page_home #welcome_text {
 	width: 270px;
 	margin: auto;
-	margin-top:5%;
-	margin-bottom: 40px;
+	margin-top: 40px;
 	text-align: center;
 }
-#page_home #welcome_text .context{
+#page_home #welcome_text .context {
 	margin-top: 30px;
 	text-align: justify;
-	line-height:150%;
+	line-height: 150%;
 }
 #page_home #details_form {
 	margin: auto;
 	text-align: left;
-	width: 75%;
+	width: auto;
 }
-#page_home #details_form label , #page_home #details_form a{
-	width: 100%;
-	max-width:350px;
+#page_home #details_form span {
+	height: 35px;
+	display: block;
+	position: relative;
+	top: 43.5px;
+	left: -45px;
+	background-image: url('../images/profile.jpg');
+	background-repeat: no-repeat;
+	background-size: 35px;
+	background-position: left;
+}
+#page_home #details_form label, #page_home #details_form a {
+	width: 70%;
+	max-width: 350px;
 	margin: auto;
+	height: 45px;
 }
-#page_home #details_form a{
-	width: 100%;
-	max-width:150px;
+#page_home #details_form a {
+	max-width: 150px;
 	margin: auto;
-	margin-top:20px;
+	margin-top: 50px;
+	height: 15px;
 }
-#page_home #details_form label #full_name{
- background-image: url('../images/profile.jpg');
- background-repeat: no-repeat;
- background-size: 35px;
- background-position: left;
-}
-#page_home #details_form label img{
-	width:25px;
-	height: 25px;
+#page_home #details_form label #full_name {
+
 }
 #page_astrology #astrology {
 	width: 75%;
@@ -55,42 +59,38 @@ body {
 	margin: 0px auto;
 }
 /*#CanvasChart{
-	margin: auto;
-	text-align: center;
-	 margin: auto;
- 	text-align: center;
-}*/
+ margin: auto;
+ text-align: center;
+ margin: auto;
+ text-align: center;
+ }*/
 
-
-
-
-
-@media only screen and (min-width:769px){	/*Desktop*/
-	#page_welcome{
-		background: url('../images/screen1_desktop.jpg') no-repeat center center fixed; 
-	  	-webkit-background-size: cover;
-	  	-moz-background-size: cover;
-	  	-o-background-size: cover;
-	  	background-size: cover;
+@media only screen and (min-width: 769px) {/*Desktop*/
+	#page_welcome {
+		background: url('../images/screen1_desktop.jpg') no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
 	}
 }
 
-@media only screen and (min-width:481px) and (max-width:768px){	    /*Tablet*/
-	#page_welcome{
-		background: url('../images/screen1_tablet.jpg') no-repeat center center fixed; 
-	  	-webkit-background-size: cover;
-	  	-moz-background-size: cover;
-	  	-o-background-size: cover;
-	  	background-size: cover;
+@media only screen and (min-width: 481px) and (max-width: 768px) {/*Tablet*/
+	#page_welcome {
+		background: url('../images/screen1_tablet.jpg') no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
 	}
 }
 
-@media only screen and (max-width:480px){	/*mobile*/
-	#page_welcome{
-		background: url('../images/screen1_mobile.jpg') no-repeat center center fixed; 
-	  	-webkit-background-size: cover;
-	  	-moz-background-size: cover;
-	  	-o-background-size: cover;
-	  	background-size: cover;
+@media only screen and (max-width: 480px) {/*mobile*/
+	#page_welcome {
+		background: url('../images/screen1_mobile.jpg') no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
 	}
 }
