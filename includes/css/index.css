@@ -10,11 +10,11 @@ body {
 	width: 270px;
 	margin: auto;
 	margin-top:5%;
-	margin-bottom: 50px;
+	margin-bottom: 40px;
 	text-align: center;
 }
 #page_home #welcome_text .context{
-	margin-top: 10%;
+	margin-top: 30px;
 	text-align: justify;
 	line-height:150%;
 }
@@ -32,7 +32,7 @@ body {
 	width: 100%;
 	max-width:150px;
 	margin: auto;
-	margin-top:30px;
+	margin-top:20px;
 }
 #page_home #details_form label #full_name{
  background-image: url('../images/profile.jpg');
