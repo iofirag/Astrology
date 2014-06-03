@@ -22,7 +22,7 @@ function getLocation() {
 	navigator.geolocation.getCurrentPosition(showPosition, errorHandler);
 }
 function showPosition(position) {
-	console.log("HTML5 position " + position.coords.latitude + " " + position.coords.longitude);
+	console.log("HTML5 location " + position.coords.latitude + " " + position.coords.longitude);
 	longitude = position.coords.latitude;
 	latitude = position.coords.longitude;
 	getCountryName(longitude,latitude);
