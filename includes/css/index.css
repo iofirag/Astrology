@@ -53,6 +53,20 @@ body {
 	text-align: justify;
 	margin-top: 20px;
 }
+#page_astrology a{
+	width: 100%;
+	margin: auto;
+	max-width: 100px;
+	margin-top:10px;
+}
+#page_astrology .trueButton{
+	background-color:#CC0033;
+	
+}
+#page_astrology .falseButton{
+	background-color:#3333FF;
+	
+}
 #page_statistics {
 	/*width: 100%;*/
 	margin: 0px auto;
