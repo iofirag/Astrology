@@ -57,7 +57,13 @@ body {
 }
 
 @media only screen and (min-width:481px) and (max-width:768px){	    /*Tablet*/
-	
+	#page_welcome{
+		background: url('../images/screen1_tablet.jpg') no-repeat center center fixed; 
+	  	-webkit-background-size: cover;
+	  	-moz-background-size: cover;
+	  	-o-background-size: cover;
+	  	background-size: cover;
+	}
 }
 
 @media only screen and (max-width:480px){	/*mobile*/
