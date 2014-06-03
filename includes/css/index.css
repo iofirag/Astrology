@@ -6,29 +6,43 @@ body {
 	display: block;
 	margin: auto;
 }
-#page_welcome{
-	background: url('../images/screen1_desktop.jpg') no-repeat center center fixed; 
-  	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
+#page_welcome {
+	background: url('../images/welcome.jpg') no-repeat center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 #page_home #details_form {
 	margin: auto;
-	text-align:left;
+	text-align: left;
 	width: 75%;
 }
-#page_astrology #astrology{
+#page_astrology #astrology {
 	width: 75%;
 	margin: auto;
 	text-align: justify;
-	margin-top:20px;
+	margin-top: 20px;
 }
-#page_statistics{
+#page_statistics {
 	/*width: 100%;*/
-	margin:0px auto;
+	margin: 0px auto;
 }
+#profile_image {
+	margin-top: 5%;
+	margin-bottom: 5%;
+	width: 250px;
+	height: 250;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url('../images/profile.jpg') no-repeat center;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}
+
 /*#CanvasChart{
-	margin: auto;
-	text-align: center;
-}*/
+ margin: auto;
+ text-align: center;
+ }*/

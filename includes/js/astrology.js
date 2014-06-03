@@ -22,7 +22,11 @@ var zodiacSigns = {
 
 $(document).ready(function() {
 	$('#page_astrology a').bind('click',function(){
-		addToDb(this);
+	    var comment = prompt("Please enter your comment","Comment");
+	    if (comment != null) {
+	    	addToDb(this,comment);
+	    }
+		else addToDb(this,"No Comment");
 	}),
 	$('#details_form #submit').bind('click',function(){
 		validate_form();
