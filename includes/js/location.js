@@ -7,7 +7,7 @@ $(document).ready(function() {
 $(document).on("pageshow","#page_welcome",function(){ 
 	setTimeout(function(){
 			$.mobile.changePage( "#page_home", { transition: "flip", changeHash: false });
-		}, 3000);
+		}, 5000);
 });
 function getIpLocation() {
 	$.get("http://ipinfo.io/" + myip, function(response) {
@@ -58,3 +58,19 @@ function errorHandler(error) {
 	}
 	getIpLocation(); //ip location
 }
+/* // detect key back event
+$(document).on("pageshow","#page_astrology",function(){ 
+		$(window).on("navigate", function (event, data) {
+		  if (data.state.direction == 'back') {
+			$.mobile.changePage( "#page_home", { transition: "flip", changeHash: false });
+		  }
+	});
+});
+*/
+/*
+ $(document).bind("mobileinit", function(){
+    if (location.hash == '#page_astrology' || location.hash == '#page_statistics') {
+       $.mobile.changePage( "#page_home", { transition: "flip", changeHash: false });
+    }
+});
+ */

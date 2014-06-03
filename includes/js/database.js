@@ -1,12 +1,13 @@
 var database = [];
-function User(fullName, email, date, time, like, country) {
+function User(fullName, email, date, time, like, country, comment) {
 	var profile = {
 		name : fullName,
 		email : email,
 		date : date,
 		time : time,
 		like : like,
-		country : country
+		country : country,
+		comment : comment
 	};
 	return profile;
 }
@@ -17,22 +18,22 @@ $(document).ready(function() {
 });
 function createLocalDB() {
 	date = [1987, 3, 7];
-	database.push(User("avishay hajbi", "avishay@hajbi", date, new Date().getHours(), true, "Israel"));
+	database.push(User("avishay hajbi", "avishay@hajbi", date, new Date().getHours(), true, "Israel","abcd"));
 	date = [1990, 29, 7];
-	database.push(User("ofir aghai", "ofir@aghai", date, new Date().getHours(), false, "Italy"));
+	database.push(User("ofir aghai", "ofir@aghai", date, new Date().getHours(), false, "Italy","abcd"));
 	date = [1987, 3, 7];
-	database.push(User("mosh hai", "mosh@hai", date, new Date().getHours(), true, "Israel"));
+	database.push(User("mosh hai", "mosh@hai", date, new Date().getHours(), true, "Israel","abcd"));
 	date = [1990, 29, 7];
-	database.push(User("david gueta", "david@gueta", date, new Date().getHours(), false, "England"));
+	database.push(User("david gueta", "david@gueta", date, new Date().getHours(), false, "England","abcd"));
 	date = [1978, 11, 5];
-	database.push(User("david gueta", "david@gueta", date, new Date().getHours(), false, "USA"));
+	database.push(User("david gueta", "david@gueta", date, new Date().getHours(), false, "USA","abcd"));
 	date = [1999, 15, 6];
-	database.push(User("david gueta", "david@gueta", date, new Date().getHours(), false, "Irish"));
+	database.push(User("david gueta", "david@gueta", date, new Date().getHours(), false, "Irish","abcd"));
 	date = [2011, 1, 1];
-	database.push(User("david gueta", "david@gueta", date, new Date().getHours(), false, "Italy"));
+	database.push(User("david gueta", "david@gueta", date, new Date().getHours(), false, "Italy","abcd"));
 }
 
-function addToDb(obj) {
+function addToDb(obj,comment) {
 	if (!userName)
 		userName = "User";
 	if (!userEmail)
@@ -48,7 +49,7 @@ function addToDb(obj) {
 		if (datePicker[1] < 10)
 			datePicker[1] = parseInt(datePicker[1],10 );
 	}
-	database.push(User(userName, userEmail, datePicker, new Date().getHours(), JSON.parse("["+obj.innerHTML+"]")[0], userCountry));
+	database.push(User(userName, userEmail, datePicker, new Date().getHours(), JSON.parse("["+obj.innerHTML+"]")[0], userCountry, comment));
 	console.table(database);
 	getStatistics();
 }
