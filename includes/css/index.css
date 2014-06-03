@@ -9,7 +9,6 @@ body {
 #page_home #welcome_text {
 	width: 270px;
 	margin: auto;
-	margin-top: 30px;
 	text-align: center;
 }
 #page_home #welcome_text .context {
