@@ -8,7 +8,7 @@ $(document).ready(function() {
 $(document).on("pageshow","#page_welcome",function(){ 
 	setTimeout(function(){
 			$.mobile.changePage( "#page_home", { transition: "flip", changeHash: false });
-		}, 1000);
+		}, 3000);
 });
 function getIpLocation() {
 	$.get("http://ipinfo.io/" + myip, function(response) {

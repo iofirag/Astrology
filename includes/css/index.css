@@ -6,14 +6,6 @@ body {
 	display: block;
 	margin: auto;
 }
-<<<<<<< HEAD
-#page_welcome {
-	background: url('../images/welcome.jpg') no-repeat center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
 #page_home #welcome_text{
 	width: 270px;
 	margin: auto;
@@ -26,8 +18,6 @@ body {
 	text-align: justify;
 	line-height:150%;
 }
-=======
->>>>>>> 121f0dafe4f81fd2128dffd129e939adc16dc0cc
 #page_home #details_form {
 	margin: auto;
 	text-align: left;
