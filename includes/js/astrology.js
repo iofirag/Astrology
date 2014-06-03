@@ -5,6 +5,7 @@ var currAstrology;
 var currDay;
 var currMonth;
 var currYear;
+var comment;
 var zodiacSigns = {
 	'capricorn' : 'Capricorn',
 	'aquarius' : 'Aquarius',
@@ -22,11 +23,11 @@ var zodiacSigns = {
 
 $(document).ready(function() {
 	$('#page_astrology a').bind('click',function(){
-	    var comment = prompt("Please enter your comment","Comment");
-	    if (comment != null) {
-	    	addToDb(this,comment);
-	    }
-		else addToDb(this,"No Comment");
+	    comment = prompt("Please enter your comment","Comment");
+	    if (comment == null)
+	    	comment="No Comment";
+		addToDb(this);
+		
 	}),
 	$('#details_form #submit').bind('click',function(){
 		validate_form();

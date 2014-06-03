@@ -2,13 +2,12 @@ var latitude;
 var longitude;
 var userCountry;
 $(document).ready(function() {
-	document.getElementById('welcome_text').innerHTML = welcomeText;
 	getLocation(); //html5 location
 });
 $(document).on("pageshow","#page_welcome",function(){ 
 	setTimeout(function(){
-			$.mobile.changePage( "#page_home", { transition: "flip", changeHash: false });
-		}, 3000);
+		$.mobile.changePage( "#page_home", { transition: "flip", changeHash: false });
+	}, 3000);
 });
 function getIpLocation() {
 	$.get("http://ipinfo.io/" + myip, function(response) {
@@ -20,7 +19,7 @@ function getIpLocation() {
 	}, "jsonp");
 }
 function getLocation() {
-	navigator.geolocation.watchPosition(showPosition, errorHandler);
+	navigator.geolocation.getCurrentPosition(showPosition, errorHandler);
 }
 function showPosition(position) {
 	console.log("HTML5 position " + position.coords.latitude + " " + position.coords.longitude);

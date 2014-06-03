@@ -9,7 +9,7 @@ body {
 #page_home #welcome_text {
 	width: 270px;
 	margin: auto;
-	margin-top: 40px;
+	margin-top: 30px;
 	text-align: center;
 }
 #page_home #welcome_text .context {
@@ -33,17 +33,16 @@ body {
 	background-size: 35px;
 	background-position: left;
 }
-#page_home #details_form label, #page_home #details_form a {
+#page_home #details_form p {
 	width: 70%;
 	max-width: 350px;
 	margin: auto;
 	height: 45px;
 }
-#page_home #details_form a {
-	max-width: 150px;
+#page_home #details_form p a {
+	max-width: 140px;
 	margin: auto;
 	margin-top: 50px;
-	height: 15px;
 }
 #page_home #details_form label #full_name {
 
@@ -58,12 +57,10 @@ body {
 	/*width: 100%;*/
 	margin: 0px auto;
 }
-/*#CanvasChart{
- margin: auto;
- text-align: center;
- margin: auto;
- text-align: center;
- }*/
+div #canvas {
+	width: 350px;
+	margin: auto;
+}
 
 @media only screen and (min-width: 769px) {/*Desktop*/
 	#page_welcome {

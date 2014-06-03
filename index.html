@@ -10,16 +10,15 @@
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
 		<script type="text/javascript" src="http://l2.io/ip.js?var=myip"></script>
 		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-		<!-- statistics -->
-		<script src="includes/js/Chart.min.js"></script>
-		<script src="includes/js/graph.js"></script>
 		<!-- page js & css -->
-		<script src="includes/js/database.js"></script>
 		<script src="includes/js/location.js"></script>
 		<script src="includes/js/astrology.js"></script>
+				<script src="includes/js/database.js"></script>
 		<script type="text/javascript" src="includes/js/crossDomain/jquery.xdomainajax.js"></script><!-- cross domain for astrology-->
 		<script type="text/javascript" src="includes/js/crossDomain/xml2json.js"></script><!-- cross domain for astrology-->
 		<link rel="stylesheet" href="includes/css/index.css"/>
+		<!-- statistics -->
+		<script src="includes/js/graph.js"></script>
 	</head>
 
 	<body>
@@ -30,16 +29,16 @@
 				<div data-role="content">
 					<article id="welcome_text"> </article>
 					<form id="details_form">
-						<label for="full_name">
+						<p><label for="full_name">
 							<span> </span><input id="full_name" type="text" name="full_name" placeholder="First / Last Name">
-						</label>
-						<label for="email">
+						</label></p>
+						<p><label for="email">
 							<span> </span><input id="email" type="email" name="email" placeholder="Email" pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z]+">
-						</label>
-						<label for="date">
+						</label></p>
+						<p><label for="date">
 							<span> </span><input id="date" placeholder="Date Of Birth" type="text" required>
-						</label>
-						<a id="submit" href="#" data-role="button">L O G I N</a>
+						</label></p>
+						<p><a id="submit" href="#" data-role="button">L O G I N</a></p>
 					</form>
 				</div>
 			</div>
@@ -53,9 +52,13 @@
 			</div>
 			
 			<div data-role="page"  id="page_statistics">
-				<div data-role="content" >
+				<div data-role="content">
 					<article id="country_name"> </article>
-					<canvas id="CanvasChart"> </canvas> <br>
+				<div>
+					<canvas id="canvas">
+						This text is displayed if your browser does not support HTML5 Canvas.
+					</canvas>
+				</div>
 					<a data-role="button" data-rel="back" href="#">Go Back</a>
 				</div>
 			</div>
