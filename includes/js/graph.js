@@ -11,10 +11,5 @@ function draw_pie() {
 		value : statisticsLike[1],
 		color : "#00dfff"	//false
 	}];
-	if (myPie== null)
-		myPie = new Chart(document.getElementById("CanvasChart").getContext("2d")).Pie(pieData);
-	else {
-		document.getElementById("CanvasChart").getContext("2d").Pie(pieData);
-		console.log("draw pie -> else");
-	}  
+	myPie = new Chart(document.getElementById("CanvasChart").getContext("2d")).Pie(pieData);
 }

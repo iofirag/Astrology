@@ -1,4 +1,5 @@
 var database = [];
+var welcomeText;
 function User(fullName, email, date, time, like, country, comment) {
 	var profile = {
 		name : fullName,
@@ -17,6 +18,7 @@ $(document).ready(function() {
 	createLocalDB();
 });
 function createLocalDB() {
+	welcomeText="W E L C O M E <p class='context'> Astrology Community, is a new way to test statistically whether daily astrology is true for most people that born on my data of birth or wrong. Let's find one another whether the forecast was right.<p>";
 	date = [1987, 3, 7];
 	database.push(User("avishay hajbi", "avishay@hajbi", date, new Date().getHours(), true, "Israel","abcd"));
 	date = [1990, 29, 7];

@@ -2,12 +2,13 @@ var latitude;
 var longitude;
 var userCountry;
 $(document).ready(function() {
+	document.getElementById('welcome_text').innerHTML = welcomeText;
 	getLocation(); //html5 location
 });
 $(document).on("pageshow","#page_welcome",function(){ 
 	setTimeout(function(){
 			$.mobile.changePage( "#page_home", { transition: "flip", changeHash: false });
-		}, 5000);
+		}, 1000);
 });
 function getIpLocation() {
 	$.get("http://ipinfo.io/" + myip, function(response) {
