@@ -1,4 +1,4 @@
-function draw_pie() {
+
 	var myColor = ["#CC0033", "#3333FF"];
 	var myData = [statisticsLike[0], statisticsLike[1]];
 
@@ -16,7 +16,7 @@ function draw_pie() {
 		var lastend = 0;
 		var myTotal = getTotal();
 
-		canvas = document.getElementById("canvas");
+		canvas = document.createElement("canvas");
 		ctx = canvas.getContext("2d");
 		canvas.width = 400;
 		canvas.height = 300;
@@ -34,8 +34,8 @@ function draw_pie() {
 			ctx.stroke(); // מסגרת
 			lastend += Math.PI * 2 * (myData[i] / myTotal);
 		}
-	}
-	plotData();
 	var dataURL = canvas.toDataURL();
 	document.getElementById("dataURL").src =  dataURL;
-}
+	}
+	plotData();
+	
