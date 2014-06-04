@@ -85,7 +85,7 @@ function xmlLoader() {
 					$('#astrology').html('');
 					$('#astrology').append("<p>"+zodiac+"</p>");
 					$('#astrology').append("<p>"+currAstrology+"</p>");
-					translateText(currAstrology);
+					//translateText(currAstrology);
 					break;
 	}}}});
 }
