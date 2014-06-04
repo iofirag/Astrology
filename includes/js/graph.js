@@ -31,8 +31,11 @@ function draw_pie() {
 			ctx.arc(200, 150, 150, lastend, lastend + (Math.PI * 2 * (myData[i] / myTotal)), false);
 			ctx.lineTo(200, 150);
 			ctx.fill();
+			ctx.stroke(); // מסגרת
 			lastend += Math.PI * 2 * (myData[i] / myTotal);
 		}
 	}
 	plotData();
+	var dataURL = canvas.toDataURL();
+	document.getElementById("dataURL").src =  dataURL;
 }
