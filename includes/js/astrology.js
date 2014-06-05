@@ -23,7 +23,7 @@ var zodiacSigns = {
 
 $(document).ready(function() {
 	$('#page_astrology a').bind('click',function(){
-	    comment = prompt("Please enter your comment","Comment");
+	    comment = prompt("Please enter your comment","");
 	    if (comment == null)
 	    	comment="No Comment";
 		addToDb(this);
