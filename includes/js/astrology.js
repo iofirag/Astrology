@@ -7,18 +7,66 @@ var currMonth;
 var currYear;
 var comment;
 var zodiacSigns = {
-	'capricorn' : 'Capricorn',
-	'aquarius' : 'Aquarius',
-	'pisces' : 'Pisces',
-	'aries' : 'Aries',
-	'taurus' : 'Taurus',
-	'gemini' : 'Gemini',
-	'cancer' : 'Cancer',
-	'leo' : 'Leo',
-	'virgo' : 'Virgo',
-	'libra' : 'Libra',
-	'scorpio' : 'Scorpio',
-	'sagittarius' : 'Sagittarius'
+	'capricorn' : {
+		'name':'Capricorn',
+		'backgound':'includes/images/zodiacBackgrounds/capricorn.jpg',
+		'icon':'../images/zodiacIcons/capricorn.jpg'
+		},
+	'aquarius' : {
+		'name':'Aquarius',
+		'backgound':'includes/images/zodiacBackgrounds/aquarius.jpg',
+		'icon':'../images/zodiacIcons/aquarius.jpg'
+		},
+	'pisces' : {
+		'name':'Pisces',
+		'background':'includes/images/zodiacBackgrounds/pisces.jpg',
+		'icon':'../images/zodiacIcons/pisces.jpg'
+	},
+	'aries' : {
+		'name':'Aries',
+		'background':'includes/images/zodiacBackgrounds/aries.jpg',
+		'icon':'../images/zodiacIcons/aries.jpg'
+	},
+	'taurus' : {
+		'name':'Taurus',
+		'background':'includes/images/zodiacBackgrounds/taurus.jpg',
+		'icon':'../images/zodiacIcons/taurus.jpg'
+	},
+	'gemini' : {
+		'name':'Gemini',
+		'background':'includes/images/zodiacBackgrounds/gemini.jpg',
+		'icon':'../images/zodiacIcons/gemini.jpg'
+	},
+	'cancer' : {
+		'name':'Cancer',
+		'background':'includes/images/zodiacBackgrounds/cancer.jpg',
+		'icon':'../images/zodiacIcons/cancer.jpg'
+	},
+	'leo' : {
+		'name':'Leo',
+		'background':'includes/images/zodiacBackgrounds/leo.jpg',
+		'icon':'../images/zodiacIcons/leo.jpg'
+	},
+	'virgo' : {
+		'name':'Virgo',
+		'background':'includes/images/zodiacBackgrounds/virgo.jpg',
+		'icon':'../images/zodiacIcons/virgo.jpg'
+	},
+	'libra' : {
+		'name':'Libra',
+		'background':'includes/images/zodiacBackgrounds/libra.jpg',
+		'icon':'../images/zodiacIcons/libra.jpg'
+	},
+	'scorpio' : {
+		'name':'Scorpio',
+		'background':'includes/images/zodiacBackgrounds/scorpio.jpg',
+		'icon':'../images/zodiacIcons/scorpio.jpg'
+	},
+	'sagittarius' : {
+		'name':'Sagittarius',
+		'background':'includes/images/zodiacBackgrounds/sagittarius.jpg',
+		'icon':'../images/zodiacIcons/sagittarius.jpg'
+	}
 };
 
 $(document).ready(function() {
@@ -78,13 +126,14 @@ function xmlLoader() {
 			var zodiac = getZodiac(datePicker[2], datePicker[1]);
 			// return the zodiac sign
 			for (var i = 0; i < JSONConvertedXML.channel.item.length; i++) {
-				if (JSONConvertedXML.channel.item[i].title.indexOf(zodiac) != -1) {
+				if (JSONConvertedXML.channel.item[i].title.indexOf(zodiac.name) != -1) {
 					console.log('title',JSONConvertedXML.channel.item[i].title);
 					console.log('astrology',JSONConvertedXML.channel.item[i].description);
 					currAstrology=JSONConvertedXML.channel.item[i].description;
 					$('#astrology').html('');
-					$('#astrology').append("<p>"+zodiac+"</p>");
+					$('#astrology').append("<p>"+zodiac.name+"</p>");
 					$('#astrology').append("<p>"+currAstrology+"</p>");
+					$('#page_astrology').css('background-image', 'url(' + zodiac.background+ ')');
 					//translateText(currAstrology);
 					break;
 	}}}});

@@ -6,31 +6,49 @@ body {
 	display: block;
 	margin: auto;
 }
+#page_home{
+	background-color: #320a5c;
+}
 #page_home #welcome_text {
-	width: 270px;
+	width:97%;
+	max-width: 440px;
 	margin: auto;
 	text-align: center;
+	font-size: 35px;
+	color: white;
+	font-family: "Arial Narrow";
 }
 #page_home #welcome_text .context {
 	margin-top: 30px;
 	text-align: justify;
 	line-height: 150%;
+	font-size: 20px;
+	color: white;
+	font-family: "Arial Narrow";
 }
 #page_home #details_form {
 	margin: auto;
 	text-align: left;
 	width: auto;
 }
-#page_home #details_form span {
+#page_home #details_form label span{
 	height: 35px;
 	display: block;
 	position: relative;
 	top: 43.5px;
 	left: -45px;
-	background-image: url('../images/profile.jpg');
 	background-repeat: no-repeat;
 	background-size: 35px;
 	background-position: left;
+}
+#page_home #details_form label[for=full_name] span {
+		background-image: url('../images/form_profile.png');
+}
+#page_home #details_form label[for=email] span {
+		background-image: url('../images/form_email.png');
+}
+#page_home #details_form label[for=date] span {
+		background-image: url('../images/form_calander.png');
 }
 #page_home #details_form p {
 	width: 70%;
@@ -41,30 +59,28 @@ body {
 #page_home #details_form p a {
 	max-width: 140px;
 	margin: auto;
-	margin-top: 50px;
-}
-#page_home #details_form label #full_name {
-
+	margin-top: 60px;
+	color: #320a5c;
+	background-color: #c0bfc0;
 }
 #page_astrology #astrology {
 	width: 75%;
+	max-width: 350px;
 	margin: auto;
 	text-align: justify;
 	margin-top: 20px;
 }
-#page_astrology a{
+#page_astrology a {
 	width: 100%;
 	margin: auto;
 	max-width: 100px;
-	margin-top:10px;
+	margin-top: 10px;
 }
-#page_astrology .trueButton{
-	background-color:#CC0033;
-	
+#page_astrology .trueButton {
+	background-color: #CC0033;
 }
-#page_astrology .falseButton{
-	background-color:#3333FF;
-	
+#page_astrology .falseButton {
+	background-color: #3333FF;
 }
 #page_statistics {
 	/*width: 100%;*/
@@ -75,39 +91,35 @@ body {
 	margin: auto;
 	display: none;
 }
-#page_statistics #dataURL{
+#page_statistics #dataURL {
 	width: 100%;
-	max-width:350px;
+	max-width: 350px;
 	margin: auto;
 }
-
-
+#page_astrology {
+	background: url('');
+	background-size: contain;
+}
 @media only screen and (min-width: 769px) {/*Desktop*/
 	#page_welcome {
-		background: url('../images/screen1_desktop.jpg') no-repeat center center fixed;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
+		background: url('../images/welcome_desktop.jpg') no-repeat center center;
 		background-size: cover;
 	}
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {/*Tablet*/
 	#page_welcome {
-		background: url('../images/screen1_tablet.jpg') no-repeat center center fixed;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
+		background: url('../images/welcome_tablet.jpg') no-repeat center;
 		background-size: cover;
 	}
 }
 
 @media only screen and (max-width: 480px) {/*mobile*/
 	#page_welcome {
-		background: url('../images/screen1_mobile.jpg') no-repeat center center fixed;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
+		background: url('../images/welcome_mobile.jpg') no-repeat center;
+		background-size: cover;
+	}
+	#page_astrology {
 		background-size: cover;
 	}
 }
