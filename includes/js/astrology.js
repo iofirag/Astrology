@@ -9,12 +9,12 @@ var comment;
 var zodiacSigns = {
 	'capricorn' : {
 		'name':'Capricorn',
-		'backgound':'includes/images/zodiacBackgrounds/capricorn.jpg',
+		'background':'includes/images/zodiacBackgrounds/capricorn.jpg',
 		'icon':'../images/zodiacIcons/capricorn.jpg'
 		},
 	'aquarius' : {
 		'name':'Aquarius',
-		'backgound':'includes/images/zodiacBackgrounds/aquarius.jpg',
+		'background':'includes/images/zodiacBackgrounds/aquarius.jpg',
 		'icon':'../images/zodiacIcons/aquarius.jpg'
 		},
 	'pisces' : {
@@ -131,8 +131,10 @@ function xmlLoader() {
 			var JSONConvertedXML = $.xml2json(myXML);
 			//console.log(JSONConvertedXML);
 			var zodiac = getZodiac(datePicker[2], datePicker[1]);
+			//console.log("getZodiac()="+zodiac.background);
 			// return the zodiac sign
 			for (var i = 0; i < JSONConvertedXML.channel.item.length; i++) {
+				//console.log(JSONConvertedXML.channel.item[i].title);
 				if (JSONConvertedXML.channel.item[i].title.indexOf(zodiac.name) != -1) {
 					console.log('title',JSONConvertedXML.channel.item[i].title);
 					console.log('astrology',JSONConvertedXML.channel.item[i].description);
