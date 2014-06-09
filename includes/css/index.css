@@ -23,8 +23,6 @@ body {
 	text-align: justify;
 	line-height: 150%;
 	font-size: 20px;
-	color: white;
-	font-family: "Arial Narrow";
 }
 #page_home #details_form {
 	margin: auto;
@@ -53,16 +51,19 @@ body {
 .ui-corner-all {
     border-radius: 0 !important;
 }
+#page_home #details_form p label{
+	margin-left:12%;
+}
 #page_home #details_form p {
-	width: 70%;
-	max-width: 350px;
+	width: 95%;
+	max-width: 445px;
 	margin: auto;
 	height: 45px;
 }
 #page_home #details_form p a {
-	max-width: 140px;
+	width: 80px;
 	margin: auto;
-	margin-top: 60px;
+	margin-top: 25%;
 	color: #320a5c;
 	background-color: #c0bfc0;
 	font-weight:bold;
