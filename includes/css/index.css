@@ -50,6 +50,9 @@ body {
 #page_home #details_form label[for=date] span {
 		background-image: url('../images/form_calander.png');
 }
+.ui-corner-all {
+    border-radius: 0 !important;
+}
 #page_home #details_form p {
 	width: 70%;
 	max-width: 350px;
@@ -100,6 +103,10 @@ body {
 	background: url('');
 	background-size: contain;
 }
+
+
+
+
 @media only screen and (min-width: 769px) {/*Desktop*/
 	#page_welcome {
 		background: url('../images/welcome_desktop.jpg') no-repeat center center;
