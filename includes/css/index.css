@@ -74,6 +74,9 @@ body {
 	margin: auto;
 	text-align: justify;
 	margin-top: 20px;
+	color:white;;
+	text-shadow: 0px 0px black;
+	font-family: "Arial Narrow";
 }
 #page_astrology a {
 	width: 100%;
