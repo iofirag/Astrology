@@ -93,11 +93,17 @@ body {
 #page_statistics {
 	/*width: 100%;*/
 	margin: 0px auto;
+	background-image: url('../images/map.jpg');
+	background-size: 100%;
 }
 #page_statistics #canvas {
 	width: 350px;
 	margin: auto;
 	display: none;
+}
+#page_statistics a{
+	position:absolute;
+	top:90%;
 }
 #page_statistics #dataURL {
 	width: 100%;
@@ -108,9 +114,6 @@ body {
 	background: url('');
 	background-size: contain;
 }
-
-
-
 
 @media only screen and (min-width: 769px) {/*Desktop*/
 	#page_welcome {
