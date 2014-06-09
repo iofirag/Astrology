@@ -3,6 +3,8 @@ var longitude;
 var userCountry;
 $(document).ready(function() {
 	getLocation(); //html5 location
+	if(!userCountry)
+		getIpLocation();
 });
 $(document).on("pageshow","#page_welcome",function(){ 
 	setTimeout(function(){
