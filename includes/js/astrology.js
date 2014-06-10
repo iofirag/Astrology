@@ -76,10 +76,11 @@ function xmlLoader() {
 					console.log('title',JSONConvertedXML.channel.item[i].title);
 					console.log('astrology',JSONConvertedXML.channel.item[i].description);
 					currAstrology=JSONConvertedXML.channel.item[i].description;
-					$('#astrology').html('');
+					$('#astrology').html("");
 					$('#astrology').append("<p class='zodiac_name'>"+zodiac.name+"</p>");
 					$('#astrology').append("<p class='zodiac_astrology'>"+currAstrology+"</p>");
 					$('#page_astrology').css('background-image', 'url(' + zodiac.background+ ')');
+					$('#page_astrology .zodiac_name').css('background-image', 'url(' + zodiac.icon+ ')');
 					//translateText(currAstrology);
 					break;
 	}}}});
