@@ -60,3 +60,61 @@ var zodiacSigns = {
 'icon':'../images/zodiacIcons/sagittarius.jpg'
 }
 };
+
+var databaseJSON = 
+user={'name' : "avishay hajbi",
+'email' : "avishay@hajbi",
+'date' : [1987, 3, 7],
+'time' : new Date().getHours(),
+'like' : false,
+'country' : "Italy",
+'comment' : "abcd"},
+
+user={'name' : "ofir aghai",
+'email' : "ofir@aghai",
+'date' : [1990, 29, 7],
+'time' : new Date().getHours(),
+'like' : true,
+'country' : "Israel",
+'comment' : "abcd"},
+
+user={'name' : "mosh hai",
+'email' : "mosh@hai",
+'date' : [1987, 3, 7],
+'time' : new Date().getHours(),
+'like' : true,
+'country' : "Israel",
+'comment' : "abcd"},
+
+user={'name' : "david gueta",
+'email' : "david@gueta",
+'date' :  [1990, 29, 7],
+'time' : new Date().getHours(),
+'like' : false,
+'country' : "England",
+'comment' : "abcd"},
+
+user={'name' : "david gueta",
+'email' : "david@gueta",
+'date' :   [1978, 11, 5],
+'time' : new Date().getHours(),
+'like' : false,
+'country' : "USA",
+'comment' : "abcd"},
+
+user={'name' : "david gueta",
+'email' : "david@gueta",
+'date' :   [1978, 11, 5],
+'time' : new Date().getHours(),
+'like' : false,
+'country' : "Italy",
+'comment' : "abcd"},
+
+user={'name' : "david gueta",
+'email' : "david@gueta",
+'date' :   [1978, 11, 5],
+'time' : new Date().getHours(),
+'like' : false,
+'country' : "Irish",
+'comment' : "abcd"};
+

@@ -20,7 +20,7 @@ body {
 }
 #page_home #welcome_text .context {
 	margin-top: 30px;
-	text-align: justify;
+	text-align: left;
 	line-height: 150%;
 	font-size: 20px;
 }
@@ -34,10 +34,13 @@ body {
 	display: block;
 	position: relative;
 	top: 43.5px;
-	left: -45px;
+	left: -40px;
 	background-repeat: no-repeat;
 	background-size: 35px;
 	background-position: left;
+}
+#page_home #details_form label span{
+	background-size: 25px;
 }
 #page_home #details_form label[for=full_name] span {
 		background-image: url('../images/form_profile.png');
@@ -58,7 +61,7 @@ body {
 	width: 95%;
 	max-width: 445px;
 	margin: auto;
-	height: 45px;
+	height: 55px;
 }
 #page_home #details_form p a {
 	width: 80px;

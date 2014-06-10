@@ -2,7 +2,8 @@ var latitude;
 var longitude;
 var userCountry;
 $(document).ready(function() {
-	getLocation(); //html5 location
+	if(!userCountry)
+		getLocation(); //html5 location
 	if(!userCountry)
 		getIpLocation();
 });

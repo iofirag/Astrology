@@ -1,7 +1,7 @@
 var database = [];
 var welcomeText="W E L C O M E <p class='context'> Astrology Community, is a new way to test statistically whether daily astrology is true for most people that born on my data of birth or wrong. Let's find one another whether the forecast was right.<p>";
 function User(fullName, email, date, time, like, country, comment) {
-	var profile = {
+	var user = {
 		name : fullName,
 		email : email,
 		date : date,
@@ -10,7 +10,7 @@ function User(fullName, email, date, time, like, country, comment) {
 		country : country,
 		comment : comment
 	};
-	return profile;
+	return user;
 }
 
 
@@ -19,20 +19,13 @@ $(document).ready(function() {
 	createLocalDB();
 });
 function createLocalDB() {
-	date = [1987, 3, 7];
-	database.push(User("avishay hajbi", "avishay@hajbi", date, new Date().getHours(), true, "Israel","abcd"));
-	date = [1990, 29, 7];
-	database.push(User("ofir aghai", "ofir@aghai", date, new Date().getHours(), false, "Italy","abcd"));
-	date = [1987, 3, 7];
-	database.push(User("mosh hai", "mosh@hai", date, new Date().getHours(), true, "Israel","abcd"));
-	date = [1990, 29, 7];
-	database.push(User("david gueta", "david@gueta", date, new Date().getHours(), false, "England","abcd"));
-	date = [1978, 11, 5];
-	database.push(User("david gueta", "david@gueta", date, new Date().getHours(), false, "USA","abcd"));
-	date = [1999, 15, 6];
-	database.push(User("david gueta", "david@gueta", date, new Date().getHours(), false, "Irish","abcd"));
-	date = [2011, 1, 1];
-	database.push(User("david gueta", "david@gueta", date, new Date().getHours(), false, "Italy","abcd"));
+	database.push(User("avishay hajbi", "avishay@hajbi", [1987, 3, 7], new Date().getHours(), true, "Israel","abcd"));
+	database.push(User("ofir aghai", "ofir@aghai", [1990, 29, 7], new Date().getHours(), false, "Italy","abcd"));
+	database.push(User("mosh hai", "mosh@hai", [1987, 3, 7], new Date().getHours(), true, "Israel","abcd"));
+	database.push(User("david gueta", "david@gueta", [1990, 29, 7], new Date().getHours(), false, "England","abcd"));
+	database.push(User("david gueta", "david@gueta", [1978, 11, 5], new Date().getHours(), false, "USA","abcd"));
+	database.push(User("david gueta", "david@gueta", [1999, 15, 6], new Date().getHours(), false, "Irish","abcd"));
+	database.push(User("david gueta", "david@gueta", [2011, 1, 1], new Date().getHours(), false, "Italy","abcd"));
 }
 
 function addToDb(obj) {
