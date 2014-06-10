@@ -136,6 +136,10 @@ body {
 	background-image: url('../images/map.jpg');
 	background-size: 100%;
 }
+#page_statistics #country_name{
+	margin-top:40px;
+	margin-bottom: 20px;
+}
 #page_statistics #canvas {
 	width: 350px;
 	margin: auto;
