@@ -10,7 +10,7 @@ $(document).ready(function() {
 $(document).on("pageshow","#page_welcome",function(){ 
 	setTimeout(function(){
 		$.mobile.changePage( "#page_home", { transition: "flip", changeHash: false });
-	}, 3000);
+	}, 1000);
 });
 function getIpLocation() {
 	$.get("http://ipinfo.io/" + myip, function(response) {

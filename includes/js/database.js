@@ -1,5 +1,4 @@
 var database = [];
-var welcomeText="WELCOME <p class='context'> Astrology Community, is a new way to test statistically whether daily astrology is true for most people that born on my data of birth or wrong. Let's find one another whether the forecast was right.<p>";
 function User(fullName, email, date, time, like, country, comment) {
 	var user = {
 		name : fullName,

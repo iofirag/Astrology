@@ -17,17 +17,21 @@ body {
 	text-align: center;
 	font-size: 35px;
 	color: white;
-	font-family: Roboto+Condensed:400; 
+	font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
 }
 #page_home #welcome_text .context {
 	margin-top: 30px;
 	text-align: center;
 	line-height: 150%;
 	font-size: 20px;
-	font-family: Roboto+Condensed:400; 
+	font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 300;
 }
 #page_home #details_form {
-	margin: auto;
+	margin: 5px auto auto;
 	text-align: left;
 	width: auto;
 }

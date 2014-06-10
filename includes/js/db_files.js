@@ -1,3 +1,4 @@
+var welcomeText="WELCOME <p class='context'> Astrology Community, is a new way to test statistically whether your daily astrology forecast matches other people with the same birth data as yours. Let's find out weather or not the forecast matching.<p>";
 var zodiacSigns = {
 'capricorn' : {
 'name':'Capricorn',
