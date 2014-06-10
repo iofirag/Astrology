@@ -3,7 +3,7 @@ var zodiacSigns = {
 'capricorn' : {
 'name':'Capricorn',
 'background':'includes/images/zodiacBackgrounds/capricorn.jpg',
-'icon':'../images/zodiacIcons/capricorn.png'
+'icon':'includes/images/zodiacIcons/capricorn.png'
 },
 'aquarius' : {
 'name':'Aquarius',
