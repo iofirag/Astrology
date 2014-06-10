@@ -16,7 +16,13 @@ function User(fullName, email, date, time, like, country, comment) {
 $(document).ready(function() {
 	document.getElementById('welcome_text').innerHTML = welcomeText;
 	createLocalDB();
+	//readFromJson(); not ready yet
 });
+function readFromJson(){
+	$.getJSON('includes/js/database.json', function(data) {
+ 	 	console.log('JSON',date);
+	});
+}
 function createLocalDB() {
 	database.push(User("avishay hajbi", "avishay@hajbi", [1987, 3, 7], new Date().getHours(), true, "Israel","abcd"));
 	database.push(User("ofir aghai", "ofir@aghai", [1990, 29, 7], new Date().getHours(), false, "Italy","abcd"));
