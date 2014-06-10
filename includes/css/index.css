@@ -7,11 +7,11 @@ body {
 	display: block;
 	margin: auto;
 }
-#page_home{
+#page_home {
 	background-color: #320a5c;
 }
 #page_home #welcome_text {
-	width:97%;
+	width: 97%;
 	max-width: 440px;
 	margin: auto;
 	margin-top: 10px;
@@ -19,8 +19,8 @@ body {
 	font-size: 30px;
 	color: white;
 	font-family: 'Roboto';
-	  font-style: normal;
-	  font-weight: 400;
+	font-style: normal;
+	font-weight: 400;
 }
 #page_home #welcome_text .context {
 	margin-top: 24px;
@@ -28,15 +28,15 @@ body {
 	line-height: 150%;
 	font-size: 20px;
 	font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 300;
+	font-style: normal;
+	font-weight: 300;
 }
 #page_home #details_form {
 	margin: auto;
 	text-align: left;
 	width: auto;
 }
-#page_home #details_form label span{
+#page_home #details_form label span {
 	height: 35px;
 	display: block;
 	position: relative;
@@ -46,23 +46,23 @@ body {
 	background-size: 35px;
 	background-position: left;
 }
-#page_home #details_form label span{
+#page_home #details_form label span {
 	background-size: 25px;
 }
 #page_home #details_form label[for=full_name] span {
-		background-image: url('../images/form_profile.png');
+	background-image: url('../images/form_profile.png');
 }
 #page_home #details_form label[for=email] span {
-		background-image: url('../images/form_email.png');
+	background-image: url('../images/form_email.png');
 }
 #page_home #details_form label[for=date] span {
-		background-image: url('../images/form_calander.png');
+	background-image: url('../images/form_calander.png');
 }
 .ui-corner-all {
-    border-radius: 0 !important;
+	border-radius: 0 !important;
 }
-#page_home #details_form p label{
-	margin-left:12%;
+#page_home #details_form p label {
+	margin-left: 12%;
 }
 #page_home #details_form p {
 	width: 95%;
@@ -76,17 +76,33 @@ body {
 	margin-top: 25%;
 	color: #320a5c;
 	background-color: #c0bfc0;
-	font-weight:bold;
+	font-weight: bold;
 }
 #page_astrology #astrology {
 	width: 75%;
 	max-width: 350px;
 	margin: auto;
-	text-align: justify;
+	text-align: left;
 	margin-top: 20px;
-	color:white;;
+	color: white;;
 	text-shadow: 0px 0px black;
-	
+}
+#page_astrology #astrology .zodiac_name {
+	padding: 10px;
+	background-image: url('../images/zodiacIcons/aquaruis.png');
+	background-repeat: no-repeat;
+	background-size: 24px;
+	padding-left: 33px;
+	background-position: 0px 10.5px;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-size:20px;
+	font-weight: 400;
+}
+#page_astrology #astrology .zodiac_astrology {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 300;
 }
 #page_astrology a {
 	width: 100%;
@@ -111,9 +127,9 @@ body {
 	margin: auto;
 	display: none;
 }
-#page_statistics a{
-	position:absolute;
-	top:90%;
+#page_statistics a {
+	position: absolute;
+	top: 90%;
 }
 #page_statistics #dataURL {
 	width: 100%;

@@ -77,8 +77,8 @@ function xmlLoader() {
 					console.log('astrology',JSONConvertedXML.channel.item[i].description);
 					currAstrology=JSONConvertedXML.channel.item[i].description;
 					$('#astrology').html('');
-					$('#astrology').append("<p>"+zodiac.name+"</p>");
-					$('#astrology').append("<p>"+currAstrology+"</p>");
+					$('#astrology').append("<p class='zodiac_name'>"+zodiac.name+"</p>");
+					$('#astrology').append("<p class='zodiac_astrology'>"+currAstrology+"</p>");
 					$('#page_astrology').css('background-image', 'url(' + zodiac.background+ ')');
 					//translateText(currAstrology);
 					break;
