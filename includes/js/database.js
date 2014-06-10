@@ -43,7 +43,9 @@ function addToDb(obj) {
 		if (datePicker[1] < 10)
 			datePicker[1] = parseInt(datePicker[1],10 );
 	}
-	database.push(User(userName, userEmail, datePicker, new Date().getHours(), JSON.parse("["+obj.innerHTML+"]")[0], userCountry, comment));
+	var answer;
+	obj.innerHTML == "Good Job" ? answer=true :  answer=false;
+	database.push(User(userName, userEmail, datePicker, new Date().getHours(), answer, userCountry, comment));
 	console.table(database);
 	getStatistics();
 }
