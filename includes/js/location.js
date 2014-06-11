@@ -11,6 +11,7 @@ $(document).ready(function() {
 });
 $(document).on("pageshow","#page_welcome",function(){ 
 	setTimeout(function(){
+		$('#details_form #date').css("border","none");
 		window.location = "#page_home";
 	}, 3000);
 });
