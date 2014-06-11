@@ -68,7 +68,14 @@ function getStatistics() {
 	statisticsLike.push(yes);
 	statisticsLike.push(no);
 	$('#country_name').html('');
-	$('#country_name').append("<p>"+userCountry+"</p>");
+	$('#country_name').append("<span></span><p>"+userCountry+"</p>");
+	$('#country_name').css("width",getTextPixel()+30+"px");
 	drawPie();
 	console.log("------Like---" + (statisticsLike[0]) + " ---Unlike--" + statisticsLike[1]);
+}
+function getTextPixel(){
+	var canvas = document.createElement('canvas');
+	var ctx = canvas.getContext("2d");
+	ctx.font = "15px Arial";        
+	return ctx.measureText(userCountry).width;
 }

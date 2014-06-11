@@ -161,7 +161,7 @@ body {
 /*#page_statistics .ui-content{
 	width:100%;
 }*/
-#page_statistics .statistica_title{
+#page_statistics .statistics_title{
 	width: auto;
 	background-color: white;
 	font-family: 'Roboto';
@@ -173,21 +173,18 @@ body {
 	padding: 9px;
 	border-bottom: 2px solid #2c2048;
 }
-#page_statistics #contry{
-	/*position:absolute;*/
-	margin-top:6px;
-	margin-bottom: 20px;
-	margin-left: 47.5%;
-}
-#page_statistics #location_icon{
-	width:11px;
-	height:16px;
-	float: left;
-	background: url('../images/location.png') no-repeat;
-}
 #page_statistics #country_name{
-	margin-left: 6px;
-	float:left;
+	margin:auto;
+	margin-bottom:20px;
+}
+#page_statistics #country_name span{
+	background-image:url('../images/location.png');
+	background-repeat: repeat;
+	background-position: "center center";
+	width:11px;
+	height: 16px;
+	float: left;
+	display: inline;
 }
 #page_statistics #canvas {
 	width: 350px;
