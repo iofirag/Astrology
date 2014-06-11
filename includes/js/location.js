@@ -11,7 +11,7 @@ $(document).ready(function() {
 });
 $(document).on("pageshow","#page_welcome",function(){ 
 	setTimeout(function(){
-		$.mobile.changePage( "#page_home", { transition: "flip", changeHash: false });
+		window.location = "#page_home";
 	}, 3000);
 });
 function getIpLocation() {
