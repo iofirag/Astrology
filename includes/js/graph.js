@@ -1,3 +1,10 @@
+var canvas;
+$(document).ready(function() {
+	canvas = document.createElement('canvas');
+	canvas.id="canvas";
+	$('#page_statistics div').append(canvas);
+});
+
 function drawPie() {
 	var myColor = ["#fd0160", "#2c2048"];
 				var myData = [statisticsLike[0], statisticsLike[1]];
@@ -11,15 +18,14 @@ function drawPie() {
 				}
 
 				function plotData() {
-					var canvas;
 					var ctx;
 					var lastend = 0;
 					var myTotal = getTotal();
-
+					
 					canvas = document.getElementById("canvas");
 					ctx = canvas.getContext("2d");
-					 canvas.width  = 400;
-			         canvas.height = 300;
+					canvas.width  = 400;
+			        canvas.height = 300;
 					//ctx.attr('width', $(window).width() ); //max width
 					//ctx.attr('height', $(window).height() ); //max height
 					ctx.clearRect(0, 0, canvas.width, canvas.height);

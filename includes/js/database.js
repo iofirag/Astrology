@@ -1,4 +1,5 @@
 var database = [];
+var statisticsLike = [];
 function User(fullName, email, date, time, like, country, comment) {
 	var user = {
 		name : fullName,
@@ -11,8 +12,6 @@ function User(fullName, email, date, time, like, country, comment) {
 	};
 	return user;
 }
-
-
 $(document).ready(function() {
 	document.getElementById('welcome_text').innerHTML = welcomeText;
 	createLocalDB();
@@ -55,8 +54,6 @@ function addToDb(obj) {
 	console.table(database);
 	getStatistics();
 }
-
-var statisticsLike = [];
 function getStatistics() {
 	statisticsLike = [];
 	var yes = 0;

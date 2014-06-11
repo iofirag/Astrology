@@ -86,7 +86,7 @@ body {
 	background-color: #c0bfc0;
 	font-weight: bold;
 }
-#page_astrology>div{
+#page_astrology>div , #page_statistics>div{
 	margin:0;
 	padding:0;
 }
@@ -175,6 +175,10 @@ body {
 	text-align: center;
 	padding: 9px;
 	border-bottom: 2px solid #2c2048;
+	margin-bottom: 20px;
+	background:url('../images/false_comment.png') left no-repeat,
+	url('../images/true_comment.png') right no-repeat;
+	background-size: 40px;
 }
 #page_statistics #country_name{
 	margin:auto;
