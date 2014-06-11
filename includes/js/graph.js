@@ -9,11 +9,11 @@ $(document).ready(function() {
     	var y = e.pageY - this.offsetTop;
     	//console.log(x+" "+y);
     	if(y<38){ // it means that we pressed on top
-    		if(x<40){
+    		if(x<50){
     			//console.log("false");
     			alert("false page");
     		}
-    		if(x>($(window).width()-40)){
+    		if(x>($(window).width()-50)){
     			//console.log("true");
     			alert("true page");
     		}

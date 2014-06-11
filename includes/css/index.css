@@ -176,8 +176,8 @@ body {
 	padding: 9px;
 	border-bottom: 2px solid #2c2048;
 	margin-bottom: 20px;
-	background:url('../images/false_comment.png') left no-repeat,
-	url('../images/true_comment.png') right no-repeat;
+	background:url('../images/false_comment.png') 1% center no-repeat,
+	url('../images/true_comment.png') 99% center no-repeat;
 	background-size: 30px;
 }
 #page_statistics #country_name{
