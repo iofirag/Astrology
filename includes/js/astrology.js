@@ -6,16 +6,17 @@ var currDay;
 var currMonth;
 var currYear;
 var comment;
-
 $(document).ready(function() {
+	$( "#details_form").submit(function( event ) {
+	  event.preventDefault();
+	  validate_form();
+	}),
 	$('#page_astrology a').bind('click',function(){
+		prevPage="#page_astrology";
 	    comment = prompt("Please enter your comment","");
 	    if (comment == null)
 	    	comment="No Comment";
 		addToDb(this);
-	}),
-	$('#details_form #submit').bind('click',function(){
-		validate_form();
 	}),
 	$('#details_form #date').bind('click',function(){
 		initDatePicker();
@@ -28,7 +29,6 @@ $(document).ready(function() {
 });
 
 function initDatePicker() {
-	$('#details_form #date').css("border","none");
 	var now = new Date();
 	currDay = ("0" + now.getDate()).slice(-2);
 	currMonth = ("0" + (now.getMonth() + 1)).slice(-2);
@@ -41,19 +41,15 @@ function initDatePicker() {
 }
 
 function validate_form() {
-    if(!$('#details_form #date').val()) {
-          $('#details_form #date').css("border","2px solid red");
-          $("#submit").attr("href", "#");
-    }
-    else{
-		datePicker = $('#date').val().split("-");
-		datePicker[0]; // year
-		if (datePicker[1] < 10)datePicker[1] = parseInt(datePicker[1], 10);// day
-		if (datePicker[2] < 10)datePicker[2] = parseInt(datePicker[2], 10);// month
-		userName = $('#full_name').val();
-		userEmail = $('#email').val();
-		xmlLoader(); 
-	}
+	datePicker = $('#date').val().split("-");
+	datePicker[0]; // year
+	if (datePicker[1] < 10)datePicker[1] = parseInt(datePicker[1], 10);// day
+	if (datePicker[2] < 10)datePicker[2] = parseInt(datePicker[2], 10);// month
+	userName = $('#full_name').val();
+	userEmail = $('#email').val();
+	xmlLoader(); 
+	window.location = "#page_astrology";
+	return false;
 }
 
 function xmlLoader() {
@@ -125,7 +121,6 @@ function getZodiac(day, month) {
 	} else if ((month == 10 && day >= 24) || (month == 11 && day <= 22)) {return zodiacSigns.scorpio;
 	} else if ((month == 11 && day >= 23) || (month == 12 && day <= 21)) {return zodiacSigns.sagittarius;}
 }
-
 /* 
  No. Language Name   Native Language Name    Code
 
