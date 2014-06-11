@@ -12,7 +12,6 @@ $(document).ready(function() {
 $(document).on("pageshow","#page_welcome",function(){ 
 	setTimeout(function(){
 		$('#details_form #date').css("border","none");
-		$('#details_form #date').attr("placeholder","Date Of Birth");
 		window.location = "#page_home";
 	}, 3000);
 });
