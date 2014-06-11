@@ -29,6 +29,7 @@ $(document).ready(function() {
 });
 
 function initDatePicker() {
+	$('#details_form #date').css("border","none");
 	var now = new Date();
 	currDay = ("0" + now.getDate()).slice(-2);
 	currMonth = ("0" + (now.getMonth() + 1)).slice(-2);
@@ -41,14 +42,18 @@ function initDatePicker() {
 }
 
 function validate_form() {
-	datePicker = $('#date').val().split("-");
-	datePicker[0]; // year
-	if (datePicker[1] < 10)datePicker[1] = parseInt(datePicker[1], 10);// day
-	if (datePicker[2] < 10)datePicker[2] = parseInt(datePicker[2], 10);// month
-	userName = $('#full_name').val();
-	userEmail = $('#email').val();
-	xmlLoader(); 
-	return false;
+	if(!$('#details_form #date').val()) {
+          $('#details_form #date').css("border","2px solid red");
+    }
+    else{
+		datePicker = $('#date').val().split("-");
+		datePicker[0]; // year
+		if (datePicker[1] < 10)datePicker[1] = parseInt(datePicker[1], 10);// day
+		if (datePicker[2] < 10)datePicker[2] = parseInt(datePicker[2], 10);// month
+		userName = $('#full_name').val();
+		userEmail = $('#email').val();
+		xmlLoader(); 
+	}
 }
 
 function xmlLoader() {
