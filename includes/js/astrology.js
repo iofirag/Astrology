@@ -6,16 +6,17 @@ var currDay;
 var currMonth;
 var currYear;
 var comment;
-
 $(document).ready(function() {
+	$( "#details_form").submit(function( event ) {
+	  event.preventDefault();
+	  validate_form();
+	}),
 	$('#page_astrology a').bind('click',function(){
+		prevPage="#page_astrology";
 	    comment = prompt("Please enter your comment","");
 	    if (comment == null)
 	    	comment="No Comment";
 		addToDb(this);
-	}),
-	$('#details_form #submit').bind('click',function(){
-		validate_form();
 	}),
 	$('#details_form #date').bind('click',function(){
 		initDatePicker();
@@ -41,9 +42,8 @@ function initDatePicker() {
 }
 
 function validate_form() {
-    if(!$('#details_form #date').val()) {
+	if(!$('#details_form #date').val()) {
           $('#details_form #date').css("border","2px solid red");
-          $("#submit").attr("href", "#");
     }
     else{
 		datePicker = $('#date').val().split("-");
@@ -81,6 +81,7 @@ function xmlLoader() {
 					$('#astrology').append("<p class='zodiac_astrology'>"+currAstrology+"</p>");
 					$('#page_astrology').css('background-image', 'url(' + zodiac.background+ ')');
 					$('#page_astrology .zodiac_name').css('background-image', 'url(' + zodiac.icon+ ')');
+					window.location = "#page_astrology";
 					//translateText(currAstrology);
 					break;
 	}}}});
@@ -125,7 +126,6 @@ function getZodiac(day, month) {
 	} else if ((month == 10 && day >= 24) || (month == 11 && day <= 22)) {return zodiacSigns.scorpio;
 	} else if ((month == 11 && day >= 23) || (month == 12 && day <= 21)) {return zodiacSigns.sagittarius;}
 }
-
 /* 
  No. Language Name   Native Language Name    Code
 
