@@ -2,15 +2,17 @@ var latitude;
 var longitude;
 var userCountry;
 $(document).ready(function() {
-	if(!userCountry)
 		getLocation(); //html5 location
-	if(!userCountry)
-		getIpLocation();
+		setTimeout(function(){
+			if(!userCountry)
+				getIpLocation();
+		}, 5000);
+
 });
 $(document).on("pageshow","#page_welcome",function(){ 
 	setTimeout(function(){
 		$.mobile.changePage( "#page_home", { transition: "flip", changeHash: false });
-	}, 1000);
+	}, 3000);
 });
 function getIpLocation() {
 	$.get("http://ipinfo.io/" + myip, function(response) {

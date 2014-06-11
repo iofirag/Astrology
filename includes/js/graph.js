@@ -1,5 +1,5 @@
 function drawPie() {
-	var myColor = ["#CC0033", "#3333FF"];
+	var myColor = ["#fd0160", "#2c2048"];
 				var myData = [statisticsLike[0], statisticsLike[1]];
 
 				function getTotal() {
