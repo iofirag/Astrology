@@ -48,7 +48,6 @@ function validate_form() {
 	userName = $('#full_name').val();
 	userEmail = $('#email').val();
 	xmlLoader(); 
-	window.location = "#page_astrology";
 	return false;
 }
 
@@ -77,6 +76,7 @@ function xmlLoader() {
 					$('#astrology').append("<p class='zodiac_astrology'>"+currAstrology+"</p>");
 					$('#page_astrology').css('background-image', 'url(' + zodiac.background+ ')');
 					$('#page_astrology .zodiac_name').css('background-image', 'url(' + zodiac.icon+ ')');
+					window.location = "#page_astrology";
 					//translateText(currAstrology);
 					break;
 	}}}});
