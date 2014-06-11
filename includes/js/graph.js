@@ -3,6 +3,22 @@ $(document).ready(function() {
 	canvas = document.createElement('canvas');
 	canvas.id="canvas";
 	$('#page_statistics div').append(canvas);
+	
+	$("#page_statistics .statistics_title").click(function(e){
+    	var x = e.pageX - this.offsetLeft;
+    	var y = e.pageY - this.offsetTop;
+    	//console.log(x+" "+y);
+    	if(y<38){ // it means that we pressed on top
+    		if(x<40){
+    			//console.log("false");
+    			alert("false page");
+    		}
+    		if(x>($(window).width()-40)){
+    			//console.log("true");
+    			alert("true page");
+    		}
+    	}
+    });
 });
 
 function drawPie() {

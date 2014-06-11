@@ -178,7 +178,7 @@ body {
 	margin-bottom: 20px;
 	background:url('../images/false_comment.png') left no-repeat,
 	url('../images/true_comment.png') right no-repeat;
-	background-size: 40px;
+	background-size: 30px;
 }
 #page_statistics #country_name{
 	margin:auto;
