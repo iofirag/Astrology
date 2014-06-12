@@ -42,8 +42,6 @@ function drawPie() {
 					ctx = canvas.getContext("2d");
 					canvas.width  = 400;
 			        canvas.height = 300;
-					//ctx.attr('width', $(window).width() ); //max width
-					//ctx.attr('height', $(window).height() ); //max height
 					ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 					for (var i = 0; i < myData.length; i++) {
@@ -53,6 +51,9 @@ function drawPie() {
 						ctx.arc(200, 150, 150, lastend, lastend + (Math.PI * 2 * (myData[i] / myTotal)), false);
 						ctx.lineTo(200, 150);
 						ctx.fill();
+						ctx.lineWidth = 3;
+						ctx.strokeStyle="white";
+						ctx.stroke();
 						lastend += Math.PI * 2 * (myData[i] / myTotal);
 					}
 					
