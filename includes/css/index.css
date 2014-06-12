@@ -174,20 +174,19 @@ body {
 	border-bottom: 2px solid #2c2048;
 }
 #page_statistics #contry{
-	/*position:absolute;*/
-	margin-top:6px;
-	margin-bottom: 20px;
-	margin-left: 47.5%;
+	margin:0 auto;
+	width:100%;
+	display: inline-block;
 }
 #page_statistics #location_icon{
 	width:11px;
 	height:16px;
-	float: left;
+	/*float: left;*/
 	background: url('../images/location.png') no-repeat;
 }
 #page_statistics #country_name{
 	margin-left: 6px;
-	float:left;
+	/*float:left;*/
 }
 #page_statistics #canvas {
 	width: 350px;

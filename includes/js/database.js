@@ -68,7 +68,7 @@ function getStatistics() {
 	statisticsLike.push(yes);
 	statisticsLike.push(no);
 	$('#country_name').html('');
-	$('#country_name').append("<p>"+userCountry+"</p>");
+	$('#country_name').text(userCountry);
 	drawPie();
 	console.log("------Like---" + (statisticsLike[0]) + " ---Unlike--" + statisticsLike[1]);
 }
