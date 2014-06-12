@@ -64,19 +64,3 @@ function errorHandler(error) {
 	}
 	getIpLocation(); //ip location
 }
-/* // detect key back event
-$(document).on("pageshow","#page_astrology",function(){ 
-		$(window).on("navigate", function (event, data) {
-		  if (data.state.direction == 'back') {
-			$.mobile.changePage( "#page_home", { transition: "flip", changeHash: false });
-		  }
-	});
-});
-*/
-/*
- $(document).bind("mobileinit", function(){
-    if (location.hash == '#page_astrology' || location.hash == '#page_statistics') {
-       $.mobile.changePage( "#page_home", { transition: "flip", changeHash: false });
-    }
-});
- */

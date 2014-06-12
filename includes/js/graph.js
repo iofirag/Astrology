@@ -1,3 +1,26 @@
+var canvas;
+$(document).ready(function() {
+	canvas = document.createElement('canvas');
+	canvas.id="canvas";
+	$('#page_statistics div').append(canvas);
+	
+	$("#page_statistics .statistics_title").click(function(e){
+    	var x = e.pageX - this.offsetLeft;
+    	var y = e.pageY - this.offsetTop;
+    	//console.log(x+" "+y);
+    	if(y<38){ // it means that we pressed on top
+    		if(x<50){
+    			//console.log("false");
+    			alert("false page");
+    		}
+    		if(x>($(window).width()-50)){
+    			//console.log("true");
+    			alert("true page");
+    		}
+    	}
+    });
+});
+
 function drawPie() {
 	var myColor = ["#fd0160", "#2c2048"];
 				var myData = [statisticsLike[0], statisticsLike[1]];
@@ -11,17 +34,14 @@ function drawPie() {
 				}
 
 				function plotData() {
-					var canvas;
 					var ctx;
 					var lastend = 0;
 					var myTotal = getTotal();
-
+					
 					canvas = document.getElementById("canvas");
 					ctx = canvas.getContext("2d");
-					 canvas.width  = 400;
-			         canvas.height = 300;
-					//ctx.attr('width', $(window).width() ); //max width
-					//ctx.attr('height', $(window).height() ); //max height
+					canvas.width  = 400;
+			        canvas.height = 300;
 					ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 					for (var i = 0; i < myData.length; i++) {
@@ -31,6 +51,9 @@ function drawPie() {
 						ctx.arc(200, 150, 150, lastend, lastend + (Math.PI * 2 * (myData[i] / myTotal)), false);
 						ctx.lineTo(200, 150);
 						ctx.fill();
+						ctx.lineWidth = 3;
+						ctx.strokeStyle="white";
+						ctx.stroke();
 						lastend += Math.PI * 2 * (myData[i] / myTotal);
 					}
 					
