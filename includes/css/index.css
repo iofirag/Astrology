@@ -158,11 +158,19 @@ body {
 	background-image: url('../images/map.jpg');
 	background-size: 100%;
 }
-/*#page_statistics .ui-content{
+#page_statistics #title{
+	border-bottom: 2px solid #2c2048;
 	width:100%;
-}*/
+}
+#pate_statistics #true_comments_a{
+	width:59px;
+	height:46px;
+	float: left;
+	background: url('../images/true_comments.png') left no-repeat;
+	background-color: red;
+}
 #page_statistics .statistica_title{
-	width: auto;
+	/*width: auto;*/
 	background-color: white;
 	font-family: 'Roboto';
 	font-style: normal;
@@ -171,7 +179,14 @@ body {
 	color:black;
 	text-align: center;
 	padding: 9px;
-	border-bottom: 2px solid #2c2048;
+	/*display:block;*/
+}
+#page_statistics #fals#false_comments_a{
+	width:59px;
+	height:46px;
+	text-align:right;
+	background: url('../images/false_comments.png') right no-repeat;
+	background-color: red;
 }
 #page_statistics #contry{
 	margin:0 auto;
@@ -193,9 +208,9 @@ body {
 	margin: auto;
 	display: none;
 }
-#page_statistics a {
+#page_statistics #goBack {
 	position: absolute;
-	top: 90%;
+	bottom:0px;
 }
 #page_statistics #dataURL {
 	width: 100%;

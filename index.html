@@ -57,17 +57,30 @@
 			
 			<div data-role="page"  id="page_statistics">
 				<div data-role="none">
-					<article class="statistica_title">STATISTICA</article><br>
+					
+					<!-- title -->
+					<nav id="title">
+						<!-- <a href="#" id="true_comments_a"><article id="true_comments">aaa</article></a> -->
+						
+						<!-- <article class="statistica_title">STATISTICA</article> -->
+						
+						<a href="#" id="false_comments_a"><article id="false_comments">bbb</article></a>
+						<div class="clear"></div>
+					</nav><br>
+					
+					
+					<!-- contry name -->
 					<section id="contry">
 						<article id="location_icon">.</article>
 						<article id="country_name"> </article>
 						<div class="clear"></div>
 					</section>
 					
+					<!-- graph -->
 					<br><br>
 					<canvas id="canvas">does not support HTML5 Canvas.</canvas>
 					<img id="dataURL" src="" > 
-					<a data-role="button" data-rel="back" href="#">Go Back</a>
+					<a id="goBack" data-role="button" data-rel="back" href="#">Go Back</a>
 				</div>
 			</div>
 		</div>
