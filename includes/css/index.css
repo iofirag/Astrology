@@ -158,16 +158,18 @@ body {
 	background-image: url('../images/map.jpg');
 	background-size: 100%;
 }
+
+
+
 #page_statistics #title{
 	border-bottom: 2px solid #2c2048;
-	width:100%;
 }
-#pate_statistics #true_comments_a{
-	width:59px;
+#page_statistics #true_comments_a{
+    width:59px;
 	height:46px;
-	float: left;
-	background: url('../images/true_comments.png') left no-repeat;
-	background-color: red;
+    float: left;
+    display:inline;
+    background: url('../images/true_comments.png') no-repeat;
 }
 #page_statistics .statistica_title{
 	/*width: auto;*/
@@ -178,16 +180,17 @@ body {
 	font-weight: 400;
 	color:black;
 	text-align: center;
+	display:inline;
 	padding: 9px;
-	/*display:block;*/
 }
-#page_statistics #fals#false_comments_a{
+#page_statistics #false_comments_a{
 	width:59px;
 	height:46px;
-	text-align:right;
-	background: url('../images/false_comments.png') right no-repeat;
-	background-color: red;
+	float:right;
+	background: url('../images/false_comments.png') no-repeat;
 }
+
+
 #page_statistics #contry{
 	margin:0 auto;
 	width:100% auto;
