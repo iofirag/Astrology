@@ -138,20 +138,23 @@ body {
 	font-style: normal;
 }
 #page_astrology a {
-	/*width: 11.0%;*/
 	margin-top: 10px;
 	border: none;
 	font-weight: normal;
 	color: white;
 	text-shadow: 0px 0px black;
+	width: 100%;
+	max-width: 150px;
 }
 #page_astrology .trueButton {
 	/*margin-right:5px;*/	/*for space between true/false buttons*/
 	background-color: #fd0160;
+	width: 130px;
 }
 #page_astrology .falseButton {
 	margin-left:5px;	/*for space between true/false buttons*/
 	background-color: #2c2048;
+	width: 130px;
 }
 #page_statistics {
 	margin: 0px auto;
