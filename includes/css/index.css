@@ -175,7 +175,6 @@ body {
     background: url('../images/true_comments.png') no-repeat;
 }
 #page_statistics .statistica_title{
-	/*width: auto;*/
 	background-color: white;
 	font-family: 'Roboto';
 	font-style: normal;
@@ -184,7 +183,6 @@ body {
 	color:black;
 	text-align: center;
 	display:inline;
-	padding: 9px;
 }
 #page_statistics #false_comments_a{
 	width:59px;
