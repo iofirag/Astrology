@@ -20,68 +20,109 @@
 		<link rel="stylesheet" href="includes/css/index.css">
 		<!-- statistics -->
 		<script src="includes/js/graph.js"></script>
+		<!-- for statistics nav off -->
+		<script src="includes/js/offMenu.js"></script>
+
 	</head>
 
 	<body>
 		<div id="wrapper">
-			<div data-role="page" id="page_welcome"> </div>
+			<div data-role="page" id="page_welcome"></div>
 			<div data-role="page" id="page_home">
 				<div data-role="content">
-					<article id="welcome_text"> </article>
+					<article id="welcome_text"></article>
 					<form action="#" id="details_form">
-							<p><label for="full_name">
-								<span> </span><input id="full_name" type="text" name="full_name" placeholder="First / Last Name">
-							</label></p>
-							<p><label for="email">
-								<span> </span><input id="email" type="email" name="email" placeholder="Email" pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z]+">
-							</label></p>
-							<p><label for="date">
-								<span> </span><input id="date" placeholder="Date Of Birth" type="text" required>
-							</label></p>
-						<p><input id="submit" type="submit" name="submit" value="LOGIN" /></p>
+						<p>
+							<label for="full_name"> <span> </span>
+								<input id="full_name" type="text" name="full_name" placeholder="First / Last Name">
+							</label>
+						</p>
+						<p>
+							<label for="email"> <span> </span>
+								<input id="email" type="email" name="email" placeholder="Email" pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z]+">
+							</label>
+						</p>
+						<p>
+							<label for="date"> <span> </span>
+								<input id="date" placeholder="Date Of Birth" type="text" required>
+							</label>
+						</p>
+						<p>
+							<input id="submit" type="submit" name="submit" value="LOGIN" />
+						</p>
 					</form>
 				</div>
 			</div>
 
 			<div data-role="page"  id="page_astrology">
 				<div data-role="content">
-					<article class="astrology_title">ASTROLOGY</article>
-					<article id="astrology"> </article>
+					<article class="astrology_title">
+						ASTROLOGY
+					</article>
+					<article id="astrology"></article>
 					<section id="question_part">
-						<p id="question">Find us whether it is true?</p>
+						<p id="question">
+							Find us whether it is true?
+						</p>
 						<a href="#page_statistics" class="trueButton" data-role="button" data-inline="true">Good Job</a>
 						<a href="#page_statistics" class="falseButton" data-role="button" data-inline="true">Big Mistake</a>
 					</section>
 				</div>
 			</div>
-			
+
 			<div data-role="page"  id="page_statistics">
 				<div data-role="none">
-					
-					<!-- title -->
-					<nav id="title" data-role="none">
-						<a href="#" id="true_comments_a"></a>
-						<article class="statistica_title">STATISTICS</article>
-						<a href="#" id="false_comments_a"></a>
-						<div class="clear"></div>
-					</nav><br>
-					
-					
-					<!-- contry name -->
-					<section id="contry">
-						<article id="location_icon">.</article>
-						<article id="country_name"> </article>
-						<div class="clear"></div>
-					</section>
-					
-					<!-- graph -->
-					<br><br>
-					<canvas id="canvas">does not support HTML5 Canvas.</canvas>
-					<img id="dataURL" src="" > 
-					<a id="goBack" data-role="button" data-rel="back" href="#">Go Back</a>
+					<div id="site-wrapper">
+						<section id="site-canvas">
+
+							<!--Left Aside Off Menu-->
+							<section href="#" id="site-menu-left">
+								<a href="#" class="toggle-nav-left" style="color: pink; font-size: 20px;"><i class="fa fa-times"></i></a>
+								<h2>My True Comments</h1>
+								<p>
+									Put any HTML you want here.
+								</p>
+							</section>
+	
+							<!--Right Aside Off Menu-->
+							<section href="#" id="site-menu-right">
+								<a href="#" class="toggle-nav-right" style="color: pink; font-size: 20px;"><i class="fa fa-times"></i></a>
+								<h2>My false Comments</h1>
+								<p>
+									Put any HTML you want here.
+								</p>
+							</section>
+						
+						
+						
+						
+						
+							<!-- title -->
+							<nav id="title" data-role="none">
+							<a href="#" id="true_comments_a" class="toggle-nav-left"></a>
+							<article class="statistica_title">STATISTICS</article>
+							<a href="#" id="false_comments_a" class="toggle-nav-right"></a>
+							<div class="clear"></div>
+							</nav><br>
+		
+							<!-- contry name -->
+							<section id="contry">
+							<article id="location_icon">.</article>
+							<article id="country_name"> </article>
+							<div class="clear"></div>
+							</section>
+		
+							<!-- graph -->
+							<br><br>
+							<canvas id="canvas">does not support HTML5 Canvas.</canvas>
+							<img id="dataURL" src="" >
+							<a id="goBack" data-role="button" data-rel="back" href="#">Go Back</a>
+						</section>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="clear"></div>
+
 	</body>
 </html>

@@ -156,22 +156,33 @@ body {
 	background-color: #2c2048;
 	width: 130px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #page_statistics {
 	margin: 0px auto;
 	background-image: url('../images/map.jpg');
 	background-size: 100%;
 }
-
-
-
 #page_statistics #title{
 	border-bottom: 2px solid #2c2048;
+	padding-top: 4px;
 }
 #page_statistics #true_comments_a{
     width:59px;
 	height:46px;
     float: left;
-    display:inline;
     background: url('../images/true_comments.png') no-repeat;
 }
 #page_statistics .statistica_title{
@@ -182,7 +193,7 @@ body {
 	font-weight: 400;
 	color:black;
 	text-align: center;
-	display:inline;
+	display:inline-block;
 }
 #page_statistics #false_comments_a{
 	width:59px;
@@ -190,8 +201,6 @@ body {
 	float:right;
 	background: url('../images/false_comments.png') no-repeat;
 }
-
-
 #page_statistics #contry{
 	margin:0 auto;
 	width:100% auto;
@@ -213,8 +222,10 @@ body {
 	display: none;
 }
 #page_statistics #goBack {
-	position: absolute;
-	bottom:0px;
+	position:absolute;
+	float: left;
+	margin: 3px;
+	bottom: 0px;
 }
 #page_statistics #dataURL {
 	width: 100%;
@@ -225,6 +236,21 @@ body {
 	background: url('');
 	background-size: contain;
 }
+
+
+.clear{
+	clear: both;
+}
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (min-width: 769px) {/*Desktop*/
 	#page_welcome {
@@ -249,6 +275,52 @@ body {
 		background-size: cover;
 	}
 }
-.clear{
-	clear: both;
+
+
+
+
+
+
+/*Off Canvas Menu */
+#site-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 800px; /* Temp: Simulates a tall page. 680px*/
 }
+#site-canvas {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+}
+#site-menu-left {
+    width: 95%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -95.5%;
+    background: white;
+    border-right: 2px solid #2c2048;
+}
+#site-menu-right {
+    width: 95%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -95.5%;
+    background: white;
+    border-left: 2px solid #2c2048;
+}
+#site-wrapper.show-nav-left #site-canvas {
+    -webkit-transform: translateX(95%);
+    transform: translateX(95%);
+}
+#site-wrapper.show-nav-right #site-canvas {
+    -webkit-transform: translateX(-95%);
+    transform: translateX(-95%);
+}
+
