@@ -180,12 +180,15 @@ body {
 	padding-top: 4px;
 }
 #page_statistics #true_comments_a{
-    width:59px;
-	height:46px;
+    width:40px;
+	height:31px;
     float: left;
+    margin-left:7px;
     background: url('../images/true_comments.png') no-repeat;
+    background-size: 30px;
+    background-position: 1px 3px;
 }
-#page_statistics .statistica_title{
+#page_statistics .statistics_title{
 	background-color: white;
 	font-family: 'Roboto';
 	font-style: normal;
@@ -194,12 +197,17 @@ body {
 	color:black;
 	text-align: center;
 	display:inline-block;
+	height: 18px;
+	padding-top: 5px;
 }
 #page_statistics #false_comments_a{
-	width:59px;
-	height:46px;
+	width:40px;
+	height:31px;
 	float:right;
+	margin-right:7px;
 	background: url('../images/false_comments.png') no-repeat;
+	background-size: 30px;
+    background-position: 9px 3px;
 }
 #page_statistics #contry{
 	margin:0 auto;
@@ -305,6 +313,7 @@ body {
     left: -95.5%;
     background: white;
     border-right: 2px solid #2c2048;
+    margin-right:400px;
 }
 #site-menu-right {
     width: 95%;
