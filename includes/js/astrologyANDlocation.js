@@ -147,9 +147,10 @@ $(document).ready(function() {
 	}, 5000);
 
 	init();
-
+	
 });
 function init() {
+	console.log("init()");
 	$("#details_form").submit(function(event) {
 		event.preventDefault();
 		validate_form();
@@ -228,6 +229,7 @@ function xmlLoader() {
 					$('#page_astrology').css('background-image', 'url(' + zodiac.background + ')');
 					$('#page_astrology .zodiac_name').css('background-image', 'url(' + zodiac.icon + ')');
 					window.location = "#page_astrology";
+					console.log("window.location = #page_astrology");
 					//translateText(currAstrology);
 					break;
 				}
