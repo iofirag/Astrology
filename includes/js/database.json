@@ -1,58 +1,61 @@
 {
-user:[
-{'name' : "avishay hajbi",
-'email' : "avishay@hajbi",
-'date' : [1987, 3, 7],
-'time' : new Date().getHours(),
-'like' : false,
-'country' : "Italy",
-'comment' : "abcd"},
-
-{'name' : "ofir aghai",
-'email' : "ofir@aghai",
-'date' : [1990, 29, 7],
-'time' : new Date().getHours(),
-'like' : true,
-'country' : "Israel",
-'comment' : "abcd"},
-
-{'name' : "mosh hai",
-'email' : "mosh@hai",
-'date' : [1987, 3, 7],
-'time' : new Date().getHours(),
-'like' : true,
-'country' : "Israel",
-'comment' : "abcd"},
-
-{'name' : "david gueta",
-'email' : "david@gueta",
-'date' :  [1990, 29, 7],
-'time' : new Date().getHours(),
-'like' : false,
-'country' : "England",
-'comment' : "abcd"},
-
-{'name' : "david gueta",
-'email' : "david@gueta",
-'date' :   [1978, 11, 5],
-'time' : new Date().getHours(),
-'like' : false,
-'country' : "USA",
-'comment' : "abcd"},
-
-{'name' : "david gueta",
-'email' : "david@gueta",
-'date' :   [1978, 11, 5],
-'time' : new Date().getHours(),
-'like' : false,
-'country' : "Italy",
-'comment' : "abcd"},
-
-{'name' : "david gueta",
-'email' : "david@gueta",
-'date' :   [1978, 11, 5],
-'time' : new Date().getHours(),
-'like' : false,
-'country' : "Irish",
-'comment' : "abcd"}]
+	"users": [
+		{
+			"name": "avishay hajbi",
+			"email": "avishay@hajbi",
+			"date": [1987, 3, 7],
+			"time": 11,
+			"like": false,
+			"country": "Italy",
+			"comment": "abcd"
+		}, {
+			"name": "ofir aghai",
+			"email": "ofir@aghai",
+			"date": [1990, 29, 7],
+			"time": 2,
+			"like": true,
+			"country": "Israel",
+			"comment": "abcd"
+		}, {
+			"name": "mosh hai",
+			"email": "mosh@hai",
+			"date": [1987, 3, 7],
+			"time": 12,
+			"like": true,
+			"country": "Israel",
+			"comment": "abcd"
+		}, {
+			"name": "david gueta",
+			"email": "david@gueta",
+			"date": [1990, 29, 7],
+			"time": 4,
+			"like": false,
+			"country": "England",
+			"comment": "abcd"
+		}, {
+			"name": "david gueta",
+			"email": "david@gueta",
+			"date": [1978, 11, 5],
+			"time": 13,
+			"like": false,
+			"country": "USA",
+			"comment": "abcd"
+		}, {
+			"name": "david gueta",
+			"email": "david@gueta",
+			"date": [1978, 11, 5],
+			"time": 2,
+			"like": false,
+			"country": "Italy",
+			"comment": "abcd"
+		}, {
+			"name": "david gueta",
+			"email": "david@gueta",
+			"date": [1978, 11, 5],
+			"time": 3,
+			"like": false,
+			"country": "Irish",
+			"comment": "abcd"
+		}
+	]
 }

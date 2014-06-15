@@ -12,14 +12,13 @@
 		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
 		<script type="text/javascript" src="includes/js/crossDomain/jquery.xdomainajax.js"></script><!-- cross domain for astrology-->
 		<script type="text/javascript" src="includes/js/crossDomain/xml2json.js"></script><!-- cross domain for astrology-->
+		<!-- flot pie -->
+		<script type="text/javascript"  src="includes/js/pie/jquery.flot.js"></script>
+		<script type="text/javascript"  src="includes/js/pie/jquery.flot.pie.js"></script>
 		<!-- page js & css -->
-		<script src="includes/js/db_files.js"></script>
-		<script src="includes/js/location.js"></script>
-		<script src="includes/js/astrology.js"></script>
+		<script src="includes/js/astrologyANDlocation.js"></script>
 		<script src="includes/js/database.js"></script>
 		<link rel="stylesheet" href="includes/css/index.css">
-		<!-- statistics -->
-		<script src="includes/js/graph.js"></script>
 		<!-- for statistics nav off -->
 		<script src="includes/js/offMenu.js"></script>
 
@@ -114,8 +113,7 @@
 		
 							<!-- graph -->
 							<br><br>
-							<canvas id="canvas">does not support HTML5 Canvas.</canvas>
-							<img id="dataURL" src="" >
+							<div id="placeholder"> </div>
 							<a id="goBack" data-role="button" data-rel="back" href="#">Go Back</a>
 						</section>
 					</div>

@@ -1,4 +1,6 @@
+var welcomeText="WELCOME <p class='context'> Astrology Community, is a new way to test statistically whether your daily astrology forecast matches other people with the same birth data as yours. Let's find out weather or not the forecast matching.<p>";
 var database = [];
+var statisticsLike = [];
 function User(fullName, email, date, time, like, country, comment) {
 	var user = {
 		name : fullName,
@@ -12,25 +14,16 @@ function User(fullName, email, date, time, like, country, comment) {
 	return user;
 }
 
-
 $(document).ready(function() {
 	document.getElementById('welcome_text').innerHTML = welcomeText;
-	createLocalDB();
-	//readFromJson(); not ready yet
+	readFromJson();
 });
-function readFromJson(){
+function readFromJson() {
 	$.getJSON('includes/js/database.json', function(data) {
- 	 	console.log('JSON',date);
+		for (i in data.users) {
+			database.push(data.users[i]);
+		}
 	});
-}
-function createLocalDB() {
-	database.push(User("avishay hajbi", "avishay@hajbi", [1987, 3, 7], new Date().getHours(), true, "Israel","abcd"));
-	database.push(User("ofir aghai", "ofir@aghai", [1990, 29, 7], new Date().getHours(), false, "Italy","abcd"));
-	database.push(User("mosh hai", "mosh@hai", [1987, 3, 7], new Date().getHours(), true, "Israel","abcd"));
-	database.push(User("david gueta", "david@gueta", [1990, 29, 7], new Date().getHours(), false, "England","abcd"));
-	database.push(User("david gueta", "david@gueta", [1978, 11, 5], new Date().getHours(), false, "USA","abcd"));
-	database.push(User("david gueta", "david@gueta", [1999, 15, 6], new Date().getHours(), false, "Irish","abcd"));
-	database.push(User("david gueta", "david@gueta", [2011, 1, 1], new Date().getHours(), false, "Italy","abcd"));
 }
 
 function addToDb(obj) {
@@ -45,18 +38,17 @@ function addToDb(obj) {
 		datePicker[2] = now.getMonth() + 1;
 		datePicker[1] = now.getDate();
 		if (datePicker[2] < 10)
-			datePicker[2] = parseInt(datePicker[2],10 );
+			datePicker[2] = parseInt(datePicker[2], 10);
 		if (datePicker[1] < 10)
-			datePicker[1] = parseInt(datePicker[1],10 );
+			datePicker[1] = parseInt(datePicker[1], 10);
 	}
 	var answer;
-	obj.innerHTML == "Good Job" ? answer=true :  answer=false;
+	obj.innerHTML == "Good Job" ? answer = true : answer = false;
 	database.push(User(userName, userEmail, datePicker, new Date().getHours(), answer, userCountry, comment));
 	console.table(database);
 	getStatistics();
 }
 
-var statisticsLike = [];
 function getStatistics() {
 	statisticsLike = [];
 	var yes = 0;
@@ -71,4 +63,82 @@ function getStatistics() {
 	$('#country_name').text(userCountry);
 	drawPie();
 	console.log("------Like---" + (statisticsLike[0]) + " ---Unlike--" + statisticsLike[1]);
+}
+
+
+
+var canvas;
+$(document).ready(function() {
+	canvas = document.createElement('canvas');
+	canvas.id = "canvas";
+	$('#page_statistics div').append(canvas);
+
+	$("#page_statistics .statistics_title").click(function(e) {
+		var x = e.pageX - this.offsetLeft;
+		var y = e.pageY - this.offsetTop;
+		//console.log(x+" "+y);
+		if (y < 38) {// it means that we pressed on top
+			if (x < 50) {
+				//console.log("false");
+				alert("false page");
+			}
+			if (x > ($(window).width() - 50)) {
+				//console.log("true");
+				alert("true page");
+			}
+		}
+	});
+});
+
+
+
+function drawPie() {
+	var labelFormatter = function labelFormatter(label, series) {
+		return "<div style='font-size:10pt; text-align:center; padding:2%;color:white; text-shdow: 0 0 black;'>" + label + "<br/>" + series.data[0][1] + "</div>";
+	};
+	var data = [{
+		label : "TRUE",
+		data : statisticsLike[0],
+		color : "#fd0160"
+	}, {
+		label : "FALSE",
+		data : statisticsLike[1],
+		color : "#2c2048"
+	}];
+
+	$.plot('#placeholder', data, {
+		series : {
+			pie : {
+				show : true,
+				radius : 1,
+				label : {
+					show : true,
+					radius : 1 / 2,
+					formatter : labelFormatter,
+					threshold : 0.1
+				}
+			}
+		},
+		legend : {
+			show : false
+		},
+		grid : {
+			hoverable : true,
+			clickable : true
+		},
+		label : {
+			threshold : 15
+		}
+	});
+
+	$("#placeholder").bind("plotclick", function(event, pos, item) {
+		if (item) {
+			if(item.series.label.indexOf("TRUE")>-1){
+				alert("true pressed");
+			}
+			else if (item.series.label.indexOf("FALSE")>-1){
+				alert("false pressed");
+			}
+		}
+	});
 }

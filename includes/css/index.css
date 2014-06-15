@@ -333,3 +333,30 @@ body {
     transform: translateX(-95%);
 }
 
+
+
+
+
+
+#placeholder {
+	width:250px;
+	height:250px;
+	max-width:350px;
+	margin:auto;
+	text-align:center;
+}
+.legend table, .legend> div {
+	opacity:1 !important;
+	margin:auto;
+	text-align:center;
+}
+.legend table {
+	border:1px solid #555;
+	margin:auto;
+	text-align:center;
+}
+.pieLabel> div {
+	text-align:center;
+	margin:0;
+	padding:0;
+}
