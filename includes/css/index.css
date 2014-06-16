@@ -312,7 +312,7 @@ body {
 
 
 
-.menu_left_title{
+#menu_left_title{
 	width: auto;
 	background-color: white;
 	font-family: 'Roboto';
@@ -322,11 +322,11 @@ body {
 	color:black;
 	text-align: center;
 	padding-top: 10px;
-	padding-bottom: 8px;
+	padding-bottom: 9px;
 	border-bottom: 1px solid #2c2048;
 	color: #ee1862;
 }
-.menu_right_title{
+#menu_right_title{
 	width: auto;
 	background-color: white;
 	font-family: 'Roboto';
@@ -336,12 +336,17 @@ body {
 	color:black;
 	text-align: center;
 	padding-top: 10px;
-	padding-bottom: 8px;
+	padding-bottom: 9px;
 	border-bottom: 1px solid #2c2048;
 	color: #2b1e49;
 }
 
-
+#true_wall, #false_wall{
+	padding-top:10px;
+}
+.user_comment{
+	padding: 5px 5px 10px 5px;
+}
 
 
 
