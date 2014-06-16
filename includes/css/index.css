@@ -177,8 +177,7 @@ body {
 }
 #page_statistics #title{
 	border-bottom: 1px solid #2c2048;
-	padding-top: 4px;
-	z-index: 1;
+	padding-top: 7px;
 }
 #page_statistics #true_comments_a{
     width:40px;
@@ -199,7 +198,7 @@ body {
 	text-align: center;
 	display:inline-block;
 	height: 18px;
-	padding-top: 5px;
+	padding-top: 3px;
 }
 #page_statistics #false_comments_a{
 	width:40px;
@@ -310,6 +309,38 @@ body {
     -webkit-transform: translateX(-95%);
     transform: translateX(-95%);
 }
+
+
+
+.menu_left_title{
+	width: auto;
+	background-color: white;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-size:15px;
+	font-weight: 400;
+	color:black;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #2c2048;
+	color: #ee1862;
+}
+.menu_right_title{
+	width: auto;
+	background-color: white;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-size:15px;
+	font-weight: 400;
+	color:black;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #2c2048;
+	color: #2b1e49;
+}
+
 
 
 

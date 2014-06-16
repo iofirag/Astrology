@@ -6,6 +6,7 @@ $(function() {
     $('.toggle-nav-left').click(function() {
         // Calling a function in case you want to expand upon this.
         toggleNav_Left();
+        console.log(".toggle-nav-left').click")
     });
 });
 
