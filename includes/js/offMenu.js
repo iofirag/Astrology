@@ -35,7 +35,7 @@ function toggleNav_Left() {
 			time = obj.time;
 			country = obj.country;
 			comment = obj.comment;
-			console.log("name="+name +"  time="+time +"  country="+country  +"  comment="+comment);
+			console.log("name="+name +"  time="+time +"  country="+country  +"  comment="+comment);																	//	<section class='comments_wall_timeIcon'><section>
 			$('#true_wall').prepend("<section class='user_comment'>    <section>"+name+"</section>    <section>"+time+"w</section>   <section>"+country+"</section>    <section>pic</section>    </section>");
 		});
     }

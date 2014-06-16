@@ -209,18 +209,20 @@ body {
 	background-size: 30px;
     background-position: 9px 3px;
 }
-#page_statistics #contry{
+
+
+#contry{
 	margin:0 auto;
 	width:100% auto;
 	display: inline-block;
 }
-#page_statistics #location_icon{
+#location_icon{
 	width:11px;
 	height:16px;
 	float: left;
 	background: url('../images/location.png') no-repeat;
 }
-#page_statistics #country_name{
+#country_name{
 	margin-left: 6px;
 	float:left;
 }
@@ -342,11 +344,20 @@ body {
 }
 
 #true_wall, #false_wall{
-	padding-top:10px;
+	width: 50% auto;
+	width: 85%;
 }
 .user_comment{
-	padding: 5px 5px 10px 5px;
+	padding: 15px 5px 10px 5px;
+	background-color: #C0BFC0;
+	margin-top: 15px;
 }
+/*.comments_wall_timeIcon {
+	width:30px;
+	height:29px;
+	background: url('../images/time_gray.png') no-repeat;
+	background-size: 15px;
+}*/
 
 
 

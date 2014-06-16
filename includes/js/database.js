@@ -142,3 +142,7 @@ function drawPie() {
 		}
 	});
 }
+
+setTimeout(function(){
+		drawPie();
+	},500);
