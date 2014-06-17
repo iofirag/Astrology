@@ -274,7 +274,7 @@ body {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 800px; /* Temp: Simulates a tall page. 680px*/
+    height: 2000px; /* Temp: Simulates a tall page. 680px*/
 }
 #site-canvas {
     width: 100%;
@@ -321,7 +321,6 @@ body {
 	font-style: normal;
 	font-size:15px;
 	font-weight: 400;
-	color:black;
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 9px;
@@ -335,7 +334,6 @@ body {
 	font-style: normal;
 	font-size:15px;
 	font-weight: 400;
-	color:black;
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 9px;
@@ -344,22 +342,83 @@ body {
 }
 
 #true_wall, #false_wall{
-	width: 50% auto;
 	width: 85%;
+	padding-top:40px;
 }
 .user_comment{
-	padding: 15px 5px 10px 5px;
-	background-color: #C0BFC0;
-	margin-top: 15px;
+	padding: 15px 27% 10px 27%;
+	margin-bottom: 90px;
 }
-/*.comments_wall_timeIcon {
-	width:30px;
-	height:29px;
+.comments_name{
+	text-align: left;
+	float:left;
+	color: #231f20;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-size:17px;
+	font-weight: 400;
+}
+.comments_time{
+	float:right;
+	margin-right: -5%;
+}
+.comments_time_timeIcon {
+	width:19px;
+	height:19px;
 	background: url('../images/time_gray.png') no-repeat;
-	background-size: 15px;
-}*/
-
-
+	background-size: 19px;
+	/*background-position: 0px 0px;*/
+	/*padding-bottom: 2px;*/
+	float: left;
+}
+.comments_time_timeNumber{
+	/*text-align:left;*/
+	margin-left: 20px;
+	color: #b8b9bc;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-size:15px;
+}
+.comments_location {
+	margin-top:10px;
+}
+.comments_location_icon{
+	width:11px;
+	height:16px;
+	float: left;
+	background: url('../images/location_gray.png') no-repeat;
+}
+.comments_country_name{
+	margin-left: 17px;
+	text-align:left;
+	color: #b8b9bc;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-size:15px;
+}
+.pic_comments{
+	width: 500px;
+	height: 340px;
+	margin-top: 20px;
+	padding-bottom: 10px;
+}
+.button_likes{
+	float:left;
+	margin-right: 10px;
+	background: url('../images/heart_gray.png') no-repeat;
+	background-position: 8px 4px;
+	background-size:15px;
+	background-color: #9a9ea3;
+	padding-left: 25px;
+}
+.button_comment{
+	float:left;
+	background: url('../images/comment_gray.png') no-repeat;
+	background-position: 8px 6px;
+	background-size:16px;
+	background-color: #9a9ea3;
+	padding-left: 25px;
+}
 
 
 
