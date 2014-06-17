@@ -1,7 +1,7 @@
 {
 	"users": [
 		{
-			"name": "avishay hajbi",
+			"name": "Avishay Hajbi",
 			"email": "avishay@hajbi",
 			"date": [1987, 3, 7],
 			"time": 11,
@@ -9,7 +9,7 @@
 			"country": "Italy",
 			"comment": "abcd"
 		}, {
-			"name": "ofir aghai",
+			"name": "Ofir Aghai",
 			"email": "ofir@aghai",
 			"date": [1990, 29, 7],
 			"time": 2,
@@ -17,7 +17,7 @@
 			"country": "Israel",
 			"comment": "abcd"
 		}, {
-			"name": "mosh hai",
+			"name": "Mosh Hai",
 			"email": "mosh@hai",
 			"date": [1987, 3, 7],
 			"time": 12,
@@ -25,7 +25,7 @@
 			"country": "Israel",
 			"comment": "abcd"
 		}, {
-			"name": "david gueta",
+			"name": "David Gueta",
 			"email": "david@gueta",
 			"date": [1990, 29, 7],
 			"time": 4,
@@ -33,31 +33,31 @@
 			"country": "England",
 			"comment": "abcd"
 		}, {
-			"name": "david gueta",
-			"email": "david@gueta",
+			"name": "David Atias",
+			"email": "david@atias",
 			"date": [1978, 11, 5],
 			"time": 13,
 			"like": false,
 			"country": "USA",
 			"comment": "abcd"
 		}, {
-			"name": "david gueta",
-			"email": "david@gueta",
+			"name": "Yael Cohen",
+			"email": "yael@cohen",
 			"date": [1978, 11, 5],
 			"time": 2,
 			"like": false,
 			"country": "Italy",
 			"comment": "abcd"
 		}, {
-			"name": "david gueta",
-			"email": "david@gueta",
+			"name": "Itay Zacay",
+			"email": "itay@zacay",
 			"date": [1978, 11, 5],
 			"time": 3,
 			"like": false,
 			"country": "Irish",
 			"comment": "abcd"
 		}, {
-			"name": "matan hikri",
+			"name": "Matan Hikri",
 			"email": "matan@guety",
 			"date": [1978, 10, 5],
 			"time": 3,

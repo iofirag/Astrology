@@ -92,6 +92,7 @@ function buildCommentPage(bool){
 		if (bool==true) random = getRandomInt(1, 17);	//true = 1,2,3 images
 		else 			random = getRandomInt(1, 11);	//false = 1,2 images
 		$('#'+post).css('background' , "url('includes/images/commentsPhotos/"+bool+random+".jpg') no-repeat");
+		document.querySelector('#'+post).textContent += "@media only screen and (max-width: 480px) { background-size: 100px;}";
 		// $('#'+post).css('width' , "500px");
 		// $('#'+post).css('height' , "340px");
 	});
