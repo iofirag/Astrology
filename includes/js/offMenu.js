@@ -19,7 +19,11 @@ function toggleNav_Left() {
     if ($('#site-wrapper').hasClass('show-nav-left')) {
         // Do things on Nav Close
         $('#site-wrapper').removeClass('show-nav-left');
+<<<<<<< HEAD
         	$("#site-wrapper").css('height','100%');
+=======
+        $('#site-wrapper').css("height", "");
+>>>>>>> origin/gh-pages
     } else {
         // Do things on Nav Open
         $('#site-wrapper').addClass('show-nav-left');
@@ -54,7 +58,11 @@ function toggleNav_right() {
     if ($('#site-wrapper').hasClass('show-nav-right')) {
         // Do things on Nav Close
         $('#site-wrapper').removeClass('show-nav-right');
+<<<<<<< HEAD
         	$("#site-wrapper").css('height','100%');
+=======
+        $('#site-wrapper').css("height", "");
+>>>>>>> origin/gh-pages
     } else {
         // Do things on Nav Open
         $('#site-wrapper').addClass('show-nav-right');
@@ -98,6 +106,7 @@ function buildCommentPage(bool){
 		$('#'+post).textContent += "@media only screen and (max-width: 480px) { background-size: 100px;}";
 		// $('#'+post).css('width' , "500px");
 		// $('#'+post).css('height' , "340px");
+		$('#site-wrapper').css("height", ((userList.length*595)+100)+"px");
 	});
 }
 

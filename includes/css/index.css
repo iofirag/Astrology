@@ -286,7 +286,11 @@ body {
     position: relative;
     overflow: hidden;
     width: 100%;
+<<<<<<< HEAD
     height: 100%; /* Temp: Simulates a tall page. 680px*/
+=======
+    height: 640px; /*Temp: Simulates a tall page. 680px*/
+>>>>>>> origin/gh-pages
 }
 #site-canvas {
     width: 100%;
@@ -338,6 +342,7 @@ body {
 	padding-bottom: 9px;
 	border-bottom: 1px solid #2c2048;
 	color: #ee1862;
+	line-height: 1.29;	/*fix different default values between chrome and firefox*/
 }
 #menu_right_title{
 	width: auto;
@@ -351,6 +356,7 @@ body {
 	padding-bottom: 9px;
 	border-bottom: 1px solid #2c2048;
 	color: #2b1e49;
+	line-height: 1.29;	/*fix different default values between chrome and firefox*/
 }
 
 #true_wall, #false_wall{
