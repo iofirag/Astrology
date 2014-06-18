@@ -19,11 +19,7 @@ function toggleNav_Left() {
     if ($('#site-wrapper').hasClass('show-nav-left')) {
         // Do things on Nav Close
         $('#site-wrapper').removeClass('show-nav-left');
-<<<<<<< HEAD
         	$("#site-wrapper").css('height','100%');
-=======
-        $('#site-wrapper').css("height", "");
->>>>>>> origin/gh-pages
     } else {
         // Do things on Nav Open
         $('#site-wrapper').addClass('show-nav-left');
@@ -58,11 +54,7 @@ function toggleNav_right() {
     if ($('#site-wrapper').hasClass('show-nav-right')) {
         // Do things on Nav Close
         $('#site-wrapper').removeClass('show-nav-right');
-<<<<<<< HEAD
         	$("#site-wrapper").css('height','100%');
-=======
-        $('#site-wrapper').css("height", "");
->>>>>>> origin/gh-pages
     } else {
         // Do things on Nav Open
         $('#site-wrapper').addClass('show-nav-right');

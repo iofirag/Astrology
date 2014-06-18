@@ -286,11 +286,7 @@ body {
     position: relative;
     overflow: hidden;
     width: 100%;
-<<<<<<< HEAD
     height: 100%; /* Temp: Simulates a tall page. 680px*/
-=======
-    height: 640px; /*Temp: Simulates a tall page. 680px*/
->>>>>>> origin/gh-pages
 }
 #site-canvas {
     width: 100%;
