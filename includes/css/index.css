@@ -274,7 +274,7 @@ body {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 680px; /*Temp: Simulates a tall page. 680px*/
+    height: 640px; /*Temp: Simulates a tall page. 680px*/
 }
 #site-canvas {
     width: 100%;
