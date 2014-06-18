@@ -9,68 +9,7 @@ var currDay;
 var currMonth;
 var currYear;
 var comment;
-var zodiacSigns = {
-	'capricorn' : {
-		'name' : 'Capricorn',
-		'background' : 'includes/images/zodiacBackgrounds/capricorn.jpg',
-		'icon' : 'includes/images/zodiacIcons/capricorn.png'
-	},
-	'aquarius' : {
-		'name' : 'Aquarius',
-		'background' : 'includes/images/zodiacBackgrounds/aquarius.jpg',
-		'icon' : 'includes/images/zodiacIcons/aquaruis.png'
-	},
-	'pisces' : {
-		'name' : 'Pisces',
-		'background' : 'includes/images/zodiacBackgrounds/pisces.jpg',
-		'icon' : 'includes/images/zodiacIcons/pisces.png'
-	},
-	'aries' : {
-		'name' : 'Aries',
-		'background' : 'includes/images/zodiacBackgrounds/aries.jpg',
-		'icon' : 'includes/images/zodiacIcons/aries.png'
-	},
-	'taurus' : {
-		'name' : 'Taurus',
-		'background' : 'includes/images/zodiacBackgrounds/taurus.jpg',
-		'icon' : 'includes/images/zodiacIcons/taurus.png'
-	},
-	'gemini' : {
-		'name' : 'Gemini',
-		'background' : 'includes/images/zodiacBackgrounds/gemini.jpg',
-		'icon' : 'includes/images/zodiacIcons/gemini.png'
-	},
-	'cancer' : {
-		'name' : 'Cancer',
-		'background' : 'includes/images/zodiacBackgrounds/cancer.jpg',
-		'icon' : 'includes/images/zodiacIcons/cancer.png'
-	},
-	'leo' : {
-		'name' : 'Leo',
-		'background' : 'includes/images/zodiacBackgrounds/leo.jpg',
-		'icon' : 'includes/images/zodiacIcons/leo.png'
-	},
-	'virgo' : {
-		'name' : 'Virgo',
-		'background' : 'includes/images/zodiacBackgrounds/virgo.jpg',
-		'icon' : 'includes/images/zodiacIcons/virgo.png'
-	},
-	'libra' : {
-		'name' : 'Libra',
-		'background' : 'includes/images/zodiacBackgrounds/libra.jpg',
-		'icon' : 'includes/images/zodiacIcons/libra.png'
-	},
-	'scorpio' : {
-		'name' : 'Scorpio',
-		'background' : 'includes/images/zodiacBackgrounds/scorpio.jpg',
-		'icon' : 'includes/images/zodiacIcons/scorpio.png'
-	},
-	'sagittarius' : {
-		'name' : 'Sagittarius',
-		'background' : 'includes/images/zodiacBackgrounds/sagittarius.jpg',
-		'icon' : 'includes/images/zodiacIcons/sagittarius.png'
-	}
-};
+var zodiacSigns=[]; 
 /* location handl */
 $(document).on("pageshow", "#page_welcome", function() {
 	setTimeout(function() {
@@ -165,6 +104,11 @@ function init() {
 		$('#details_form #date').unbind('click');
 	}), $('#details_form #date').bind('focus', function() {
 		this.type = 'date';
+	});
+	$.getJSON('includes/js/database.json', function(data) {
+ 	 	for(i in data.zodiacSigns){
+			zodiacSigns.push(data.zodiacSigns[i]);
+		}
 	});
 }
 
@@ -267,29 +211,29 @@ function translateText(text) {
 
 function getZodiac(day, month) {
 	if ((month == 1 && day <= 20) || (month == 12 && day >= 22)) {
-		return zodiacSigns.capricorn;
+		return zodiacSigns[0].capricorn;
 	} else if ((month == 1 && day >= 21) || (month == 2 && day <= 18)) {
-		return zodiacSigns.aquarius;
+		return zodiacSigns[0].aquarius;
 	} else if ((month == 2 && day >= 19) || (month == 3 && day <= 20)) {
-		return zodiacSigns.pisces;
+		return zodiacSigns[0].pisces;
 	} else if ((month == 3 && day >= 21) || (month == 4 && day <= 20)) {
-		return zodiacSigns.aries;
+		return zodiacSigns[0].aries;
 	} else if ((month == 4 && day >= 21) || (month == 5 && day <= 20)) {
-		return zodiacSigns.taurus;
+		return zodiacSigns[0].taurus;
 	} else if ((month == 5 && day >= 21) || (month == 6 && day <= 20)) {
-		return zodiacSigns.gemini;
+		return zodiacSigns[0].gemini;
 	} else if ((month == 6 && day >= 22) || (month == 7 && day <= 22)) {
-		return zodiacSigns.cancer;
+		return zodiacSigns[0].cancer;
 	} else if ((month == 7 && day >= 23) || (month == 8 && day <= 23)) {
-		return zodiacSigns.leo;
+		return zodiacSigns[0].leo;
 	} else if ((month == 8 && day >= 24) || (month == 9 && day <= 23)) {
-		return zodiacSigns.virgo;
+		return zodiacSigns[0].virgo;
 	} else if ((month == 9 && day >= 24) || (month == 10 && day <= 23)) {
-		return zodiacSigns.libra;
+		return zodiacSigns[0].libra;
 	} else if ((month == 10 && day >= 24) || (month == 11 && day <= 22)) {
-		return zodiacSigns.scorpio;
+		return zodiacSigns[0].scorpio;
 	} else if ((month == 11 && day >= 23) || (month == 12 && day <= 21)) {
-		return zodiacSigns.sagittarius;
+		return zodiacSigns[0].sagittarius;
 	}
 }
 

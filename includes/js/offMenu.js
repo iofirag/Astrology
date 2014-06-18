@@ -1,3 +1,4 @@
+var heightPage;
 /* Left Menu */
 /*====================================
 =            ON DOM READY            =
@@ -18,11 +19,12 @@ function toggleNav_Left() {
     if ($('#site-wrapper').hasClass('show-nav-left')) {
         // Do things on Nav Close
         $('#site-wrapper').removeClass('show-nav-left');
+        	$("#site-wrapper").css('height','100%');
     } else {
         // Do things on Nav Open
         $('#site-wrapper').addClass('show-nav-left');
-        
         buildCommentPage(true);
+         $("#site-wrapper").css('height',heightPage+'px');
     }
     //$('#site-wrapper').toggleClass('show-nav');
 }
@@ -52,11 +54,12 @@ function toggleNav_right() {
     if ($('#site-wrapper').hasClass('show-nav-right')) {
         // Do things on Nav Close
         $('#site-wrapper').removeClass('show-nav-right');
+        	$("#site-wrapper").css('height','100%');
     } else {
         // Do things on Nav Open
         $('#site-wrapper').addClass('show-nav-right');
-                
          buildCommentPage(false);
+          $("#site-wrapper").css('height',heightPage+'px');
     }
     //$('#site-wrapper').toggleClass('show-nav');
 }
@@ -67,10 +70,10 @@ function toggleNav_right() {
 function buildCommentPage(bool){
 	console.log('buildCommentPage(false);');
 	userList = [];
-	
+	heightPage=0;
 	//find all false users
 	database.forEach(function(obj) {
-		if (obj.like == bool && obj.country == userCountry)  userList.push(obj);
+		if (obj.like == bool && obj.country == userCountry)  {userList.push(obj); heightPage+=600;}
 	});
 	console.table(userList);
 	

@@ -63,6 +63,9 @@ function getStatistics() {
 	$('#country_name').text(userCountry);
 	drawPie();
 	console.log("------Like---" + (statisticsLike[0]) + " ---Unlike--" + statisticsLike[1]);
+	setTimeout(function(){
+		drawPie();
+	},500);
 }
 
 
@@ -93,17 +96,17 @@ $(document).ready(function() {
 
 
 function drawPie() {
-	var labelFormatter = function labelFormatter(label, series) {
-		return "<div style='font-size:10pt; text-align:center; padding:2%;color:white; text-shdow: 0 0 black;'>" + label + "<br/>" + series.data[0][1] + "</div>";
+		var labelFormatter = function labelFormatter(label, series) {
+		return "<div class='pieTextState' style='text-align:center; padding:2%;color:white; text-shdow: 0 0 black;'>" +series.data[0][1] + "<br/>" + label +   "<br/> <span class='pieTextAstrology'>Astrology</span></div>";
 	};
 	var data = [{
-		label : "TRUE",
-		data : statisticsLike[0],
-		color : "#fd0160"
-	}, {
-		label : "FALSE",
+		label : "MISTAKE",
 		data : statisticsLike[1],
 		color : "#2c2048"
+	}, {
+		label : "CORRECT",
+		data : statisticsLike[0],
+		color : "#fd0160"
 	}];
 
 	$.plot('#placeholder', data, {
@@ -111,38 +114,43 @@ function drawPie() {
 			pie : {
 				show : true,
 				radius : 1,
+				//innerRadius: 0.125,
 				label : {
 					show : true,
 					radius : 1 / 2,
 					formatter : labelFormatter,
 					threshold : 0.1
-				}
+				},
+				 stroke: { 
+  				    width: 3
+  				},
 			}
 		},
 		legend : {
 			show : false
 		},
 		grid : {
-			hoverable : true,
+			hoverable : false,
 			clickable : true
 		},
 		label : {
 			threshold : 15
 		}
 	});
-
-	$("#placeholder").bind("plotclick", function(event, pos, item) {
-		if (item) {
-			if(item.series.label.indexOf("TRUE")>-1){
-				alert("true pressed");
-			}
-			else if (item.series.label.indexOf("FALSE")>-1){
-				alert("false pressed");
-			}
-		}
+$("#placeholder").bind("plotclick", function(event, pos, item) {
+	$( ".toggle-nav-left" ).on( "click", function() {
+	   toggleNav_Left();
+	}),
+	$( ".toggle-nav-right" ).on( "click", function() {
+	  toggleNav_right();
 	});
+	if (item) {
+		if(item.series.label.indexOf("CORRECT") > -1){
+			$( ".toggle-nav-left" ).trigger( "click" );
+		}
+		else if (item.series.label.indexOf("MISTAKE") > -1){
+			$( ".toggle-nav-right" ).trigger( "click" );
+		}
+	}
+});
 }
-
-setTimeout(function(){
-		drawPie();
-	},500);
