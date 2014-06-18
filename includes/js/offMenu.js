@@ -85,14 +85,14 @@ function buildCommentPage(bool){
 		//post and save 'id' specific from millisecond for every one of post
 		var d = new Date();
 		post = d.getMilliseconds();
-		$('#'+bool+'_wall').prepend("<section class='user_comment'>    <section class='comments_name'>"+name+"</section>    <section class='comments_time'><section class='comments_time_timeIcon'></section><section class='comments_time_timeNumber'>"+time+"w</section><div class='clear'></div></section>  <br>  <section class='comments_location'><section class='comments_location_icon'></section><section class='comments_country_name'>"+country+"</section><div class='clear'></div></section>      <section class='pic_comments' id="+post+"></section>   <br>   <button name='button' class='button_likes'>Likes</button>   <button name='button' class='button_comment'>Comment</button>   </section>");
+		$('#'+bool+'_wall').prepend("<section class='user_comment'>    <section class='comments_name'>"+name+"</section>    <section class='comments_time'><section class='comments_time_timeIcon'></section><section class='comments_time_timeNumber'>"+time+"w</section><div class='clear'></div></section>  <br>  <section class='comments_location'><section class='comments_location_icon'></section><section class='comments_country_name'>"+country+"</section><div class='clear'></div></section>      <section class='comments_pic' id="+post+"></section>   <br>    <input type='button' value='Likes' class='button_likes'>    <input type='button' value='Comment' class='button_comment'>   </section>");
 		
 		var random;
 		//the random image number
-		if (bool==true) random = getRandomInt(1, 17);	//true = 1,2,3 images
-		else 			random = getRandomInt(1, 11);	//false = 1,2 images
+		if (bool==true) random = getRandomInt(1, 16);	//true = 1,2,..,16 images
+		else 			random = getRandomInt(1, 11);	//false = 1,2...11 images
 		$('#'+post).css('background' , "url('includes/images/commentsPhotos/"+bool+random+".jpg') no-repeat");
-		document.querySelector('#'+post).textContent += "@media only screen and (max-width: 480px) { background-size: 100px;}";
+		$('#'+post).textContent += "@media only screen and (max-width: 480px) { background-size: 100px;}";
 		// $('#'+post).css('width' , "500px");
 		// $('#'+post).css('height' , "340px");
 	});

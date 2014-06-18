@@ -37,8 +37,8 @@
 			"email": "david@atias",
 			"date": [1978, 11, 5],
 			"time": 13,
-			"like": false,
-			"country": "USA",
+			"like": true,
+			"country": "Israel",
 			"comment": "abcd"
 		}, {
 			"name": "Yael Cohen",
@@ -54,7 +54,7 @@
 			"date": [1978, 11, 5],
 			"time": 3,
 			"like": false,
-			"country": "Irish",
+			"country": "Israel",
 			"comment": "abcd"
 		}, {
 			"name": "Matan Hikri",
@@ -62,6 +62,14 @@
 			"date": [1978, 10, 5],
 			"time": 3,
 			"like": false,
+			"country": "Israel",
+			"comment": "abcd"
+		}, {
+			"name": "Gal Shalit",
+			"email": "gal@shalit",
+			"date": [1978, 11, 5],
+			"time": 3,
+			"like": true,
 			"country": "Israel",
 			"comment": "abcd"
 		}
