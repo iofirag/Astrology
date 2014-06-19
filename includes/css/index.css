@@ -304,7 +304,7 @@ body {
     top: 0;
     left: -95.5%;
     background: white;
-    border-right: 2px solid #2c2048;
+    border-right: 2px solid #2d3001;
 }
 #site-menu-right {
     width: 95%;
@@ -313,7 +313,7 @@ body {
     top: 0;
     right: -95.5%;
     background: white;
-    border-left: 2px solid #2c2048;
+    border-left: 2px solid #2d3001;
 }
 #site-wrapper.show-nav-left #site-canvas {
     -webkit-transform: translateX(95%);
