@@ -419,20 +419,26 @@ body {
 	float:left;
 	margin-right: 10px;
 	background: url('../images/heart_gray.png') no-repeat;
-	background-position: 8px 4px;
-	background-size:15px;
+	background-position: 9px 7px;
+	background-size:19px;
 	background-color: #9a9ea3;
-	padding-left: 25px;
+	padding: 5px 0 5px 25px;
+	width: 50px;
 	color: #e6e6e7;
+	font-size:15px;
+	font-weight: normal;
+	
 }
 .button_comment{
 	float:left;
 	background: url('../images/comment_gray.png') no-repeat;
-	background-position: 8px 6px;
-	background-size:16px;
+	background-position: 9px 8px;
+	background-size:20px;
 	background-color: #9a9ea3;
-	padding-left: 25px;
+	padding: 5px 9px 5px 35px;
 	color: #e6e6e7;
+	font-size:15px;
+	font-weight: normal;
 }
 
 

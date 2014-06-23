@@ -87,7 +87,7 @@ function buildCommentPage(bool){
 		//post and save 'id' specific from millisecond for every one of post
 		var d = new Date();
 		post = d.getMilliseconds();
-		$('#'+bool+'_wall').prepend("<section class='user_comment'>    <section class='comments_name'>"+name+"</section>    <section class='comments_time'><section class='comments_time_timeIcon'></section><section class='comments_time_timeNumber'>"+time+"w</section><div class='clear'></div></section>  <br>  <section class='comments_location'><section class='comments_location_icon'></section><section class='comments_country_name'>"+country+"</section><div class='clear'></div></section>      <section class='comments_pic' id="+post+"></section>   <br>    <input type='button' value='Likes' class='button_likes'>    <input type='button' value='Comment' class='button_comment'>   </section>");
+		$('#'+bool+'_wall').prepend("<section class='user_comment'>    <section class='comments_name'>"+name+"</section>    <section class='comments_time'><section class='comments_time_timeIcon'></section><section class='comments_time_timeNumber'>"+time+"w</section><div class='clear'></div></section>  <br>  <section class='comments_location'><section class='comments_location_icon'></section><section class='comments_country_name'>"+country+"</section><div class='clear'></div></section>      <section class='comments_pic' id="+post+"></section>   <br>    <a href='#'><section class='button_likes'>Likes</section></a>    <a href='#'><section class='button_comment'>Comment</section></a>   </section>");
 		
 		var random;
 		//the random image number
