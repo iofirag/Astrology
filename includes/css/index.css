@@ -414,8 +414,9 @@ body {
 }
 .comments_pic{
 	width: 100%;
-	height: 390px;
+	height: 375px;
 	margin-top: 20px;
+	background-size:100% !important;
 }
 .button_likes{
 	float:left;
@@ -516,6 +517,9 @@ body {
 		padding: 15px 10% 10px 10%;
 		margin-bottom: 50px;
 	}
+	.comments_pic{
+		height: 290px;
+	}
 }
 
 @media only screen and (max-width: 480px) {/*mobile*/
@@ -561,5 +565,8 @@ body {
 	.user_comment{
 		padding: 15px 0% 10px 0%;
 		margin-bottom: 50px;
+	}
+	.comments_pic{
+		height: 210px;
 	}
 }
