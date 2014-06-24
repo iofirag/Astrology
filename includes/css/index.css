@@ -103,7 +103,7 @@ body {
 #page_astrology .astrology_title{
 	width: auto;
 	background-color: white;
-	font-family: 'Roboto';
+	font-family: 'Roboto Condensed', sans-serif;
 	font-style: normal;
 	font-size:15px;
 	font-weight: 400;
@@ -192,7 +192,7 @@ body {
 }
 #page_statistics .statistics_title{
 	background-color: white;
-	font-family: 'Roboto';
+	font-family: 'Roboto Condensed', sans-serif;
 	font-style: normal;
 	font-size:15px;
 	font-weight: 400;
@@ -227,6 +227,9 @@ body {
 #country_name{
 	margin-left: 6px;
 	float:left;
+	font-family: 'Roboto';
+	font-weight: 500;
+	color: #6c6060;
 }
 #page_statistics #canvas {
 	width: 350px;
@@ -369,9 +372,8 @@ body {
 	float:left;
 	color: #231f20;
 	font-family: 'Roboto';
-	font-style: normal;
 	font-size:17px;
-	font-weight: 400;
+	font-weight: 700;
 }
 .comments_time{
 	float:right;
