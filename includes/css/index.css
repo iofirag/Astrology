@@ -189,7 +189,7 @@ body {
     float: left;
     background: url('../images/true_comments.png') no-repeat;
     background-size: 30px;
-    background-position: 20px 3px;
+    background-position: 12px 3px;
 }
 #page_statistics .statistics_title{
 	background-color: white;
@@ -209,7 +209,7 @@ body {
 	float:right;
 	background: url('../images/false_comments.png') no-repeat;
 	background-size: 30px;
-    background-position: 0px 3px;
+    background-position: 8px 3px;
 }
 
 
