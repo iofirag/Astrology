@@ -86,8 +86,14 @@ function buildCommentPage(bool) {
 			random = getRandomInt(1, 16);
 		//true = 1,2,..,16 images
 		else
-			random = getRandomInt(1, 11);
+			random = getRandomInt(1, 10);
 		//false = 1,2...11 images
+		
+		//var image = new Image();
+		//image.src= "includes/images/commentsPhotos/" + bool + random + ".jpg";
+		//alert(image.naturalHeight+ "----" + "includes/images/commentsPhotos/" + bool + random + ".jpg");
+		//$("#"+post).css("height", image.naturalHeight+"px");
+		
 		$('#' + post).css('background', "url('includes/images/commentsPhotos/" + bool + random + ".jpg') no-repeat");
 		$('#' + post).textContent += "@media only screen and (max-width: 480px) { background-size: 100px;}";
 		// $('#'+post).css('width' , "500px");
