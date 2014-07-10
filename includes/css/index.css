@@ -538,7 +538,7 @@ body {
 	}
 	.trueButton,.falseButton{
 		width:39.5%;
-		display:inline-block;
+		/*display:inline-block;*/
 	}
 	#site-menu-left {
 	    width: 85%;
