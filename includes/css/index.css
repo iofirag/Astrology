@@ -535,9 +535,10 @@ body {
 	#page_astrology {
 		background-size: cover;
 	}
-	.trueButton,.falseButton{
-		width:38%;
-		/*display:inline-block;*/
+	#page_astrology .trueButton, #page_astrology .falseButton {
+	    width: 35%;
+	    font-family: "Roboto";
+	    max-width: 50%;
 	}
 	#site-menu-left {
 	    width: 85%;
