@@ -537,7 +537,7 @@ body {
 		background-size: cover;
 	}
 	.trueButton,.falseButton{
-		width:39.5%;
+		width:38%;
 		/*display:inline-block;*/
 	}
 	#site-menu-left {
