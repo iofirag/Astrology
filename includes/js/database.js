@@ -83,11 +83,9 @@ $(document).ready(function() {
 		if (y < 38) {// it means that we pressed on top
 			if (x < 50) {
 				//console.log("false");
-				alert("false page");
 			}
 			if (x > ($(window).width() - 50)) {
 				//console.log("true");
-				alert("true page");
 			}
 		}
 	});
