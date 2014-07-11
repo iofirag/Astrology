@@ -419,8 +419,7 @@ body {
 }
 .comments_pic{
 	width: 100%;
-	height:auto;
-	max-height: 290px;
+	height:295px;
 	margin-top: 20px;
 	background-size:100% !important;
 }
