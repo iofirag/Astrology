@@ -45,7 +45,7 @@ function addToDb(obj) {
 	var answer;
 	obj.innerHTML == "Good Job" ? answer = true : answer = false;
 	database.push(User(userName, userEmail, datePicker, new Date().getHours(), answer, userCountry, comment));
-	console.table(database);
+	//console.table(database);
 	getStatistics();
 }
 
@@ -62,7 +62,7 @@ function getStatistics() {
 	$('#country_name').html('');
 	$('#country_name').text(userCountry);
 	drawPie();
-	console.log("------Like---" + (statisticsLike[0]) + " ---Unlike--" + statisticsLike[1]);
+	//console.log("------Like---" + (statisticsLike[0]) + " ---Unlike--" + statisticsLike[1]);
 	setTimeout(function(){
 		drawPie();
 	},500);
