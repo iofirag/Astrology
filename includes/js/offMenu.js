@@ -57,7 +57,7 @@ function toggleNav_right() {
 }
 
 function buildCommentPage(bool) {
-	console.log('buildCommentPage(false);');
+	//console.log('buildCommentPage(false);');
 	userList = [];
 
 	//find all false users
@@ -65,7 +65,7 @@ function buildCommentPage(bool) {
 		if (obj.like == bool && obj.country == userCountry)
 			userList.push(obj);
 	});
-	console.table(userList);
+	//console.table(userList);
 
 	//put all true obj into #true_comments
 	userList.forEach(function(obj) {
@@ -73,7 +73,7 @@ function buildCommentPage(bool) {
 		time = obj.time;
 		country = obj.country;
 		comment = obj.comment;
-		console.log("name=" + name + "  time=" + time + "  country=" + country + "  comment=" + comment);
+		//console.log("name=" + name + "  time=" + time + "  country=" + country + "  comment=" + comment);
 
 		//post and save 'id' specific from millisecond for every one of post
 		var d = new Date();
@@ -107,17 +107,17 @@ function buildCommentPage(bool) {
 	
 	if (desktop.matches) {// if media query matches
 		//alert("Window is Desktop");
-		console.log("Window is Desktop");
+		//console.log("Window is Desktop");
 		$('#site-wrapper').css("height", (((userList.length+1) * 404) + 100) + "px");
 	}
 	if (tablet.matches) {// if media query matches
 		//alert("Window is Tablet");
-		console.log("Window is Tablet");
+		//console.log("Window is Tablet");
 		$('#site-wrapper').css("height", (((userList.length+1) * 404) + 100) + "px");
 	}
 	if (mobile.matches) {// if media query matches
 		//alert("Window is Mobile");
-		console.log("Window is Mobile");
+		//console.log("Window is Mobile");
 		$('#site-wrapper').css("height", (((userList.length+1) * 274) + 100) + "px");
 	}
 }

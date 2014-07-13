@@ -22,7 +22,7 @@ function getIpLocation() {
 		//console.log(response); country region city loc
 		longitude = response.loc.substring(0, response.loc.indexOf(","));
 		latitude = response.loc.substring(response.loc.indexOf(",") + 1, response.loc.length);
-		console.log("IP location - " + longitude + " " + latitude);
+		//console.log("IP location - " + longitude + " " + latitude);
 		getCountryName(longitude, latitude);
 	}, "jsonp");
 }
@@ -32,7 +32,7 @@ function getLocation() {
 }
 
 function showPosition(position) {
-	console.log("HTML5 location " + position.coords.latitude + " " + position.coords.longitude);
+	//console.log("HTML5 location " + position.coords.latitude + " " + position.coords.longitude);
 	longitude = position.coords.latitude;
 	latitude = position.coords.longitude;
 	getCountryName(longitude, latitude);
@@ -89,7 +89,7 @@ $(document).ready(function() {
 	
 });
 function init() {
-	console.log("init()");
+	//console.log("init()");
 	$("#details_form").submit(function(event) {
 		event.preventDefault();
 		validate_form();
@@ -173,7 +173,7 @@ function xmlLoader() {
 					$('#page_astrology').css('background-image', 'url(' + zodiac.background + ')');
 					$('#page_astrology .zodiac_name').css('background-image', 'url(' + zodiac.icon + ')');
 					window.location = "#page_astrology";
-					console.log("window.location = #page_astrology");
+					//console.log("window.location = #page_astrology");
 					//translateText(currAstrology);
 					break;
 				}
@@ -190,7 +190,7 @@ function translateText(text) {
 		dataType : 'jsonp',
 		success : function(headers) {
 			browsrLanguage = headers['Accept-Language'].substring(0, 2);
-			console.log('browser language', browsrLanguage);
+			//console.log('browser language', browsrLanguage);
 		}
 	});
 	$.ajax({
@@ -201,10 +201,10 @@ function translateText(text) {
 		//contentType: "application/x-www-form-urlencoded;charset=ISO-8859-15",
 		contentType : "charset=utf-8",
 		success : function(res) {
-			console.log('res', res);
+			//console.log('res', res);
 		},
 		error : function(xhr, ajaxOptions, thrownError) {
-			console.log("php translate error");
+			//console.log("php translate error");
 		}
 	});
 }
