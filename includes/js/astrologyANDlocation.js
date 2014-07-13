@@ -49,7 +49,7 @@ function getCountryName(longitude, latitude) {
 					if (data.results[4].address_components[i].types[j] == 'country') {
 						var country_code = data.results[4].address_components[i].long_name;
 						userCountry = country_code;
-						console.log('country_code', country_code);
+						// console.log('country_code', country_code);
 					}
 				}
 			}
@@ -164,8 +164,8 @@ function xmlLoader() {
 			for (var i = 0; i < JSONConvertedXML.channel.item.length; i++) {
 				//console.log(JSONConvertedXML.channel.item[i].title);
 				if (JSONConvertedXML.channel.item[i].title.indexOf(zodiac.name) != -1) {
-					console.log('title', JSONConvertedXML.channel.item[i].title);
-					console.log('astrology', JSONConvertedXML.channel.item[i].description);
+					// console.log('title', JSONConvertedXML.channel.item[i].title);
+					// console.log('astrology', JSONConvertedXML.channel.item[i].description);
 					currAstrology = JSONConvertedXML.channel.item[i].description;
 					$('#astrology').html("");
 					$('#astrology').append("<p class='zodiac_name'>" + zodiac.name + "</p>");
