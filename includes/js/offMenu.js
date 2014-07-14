@@ -83,7 +83,7 @@ function buildCommentPage(bool) {
 		var random;
 		//the random image number
 		if (bool == true)
-			random = getRandomInt(1, 16);
+			random = getRandomInt(1, 15);
 		//true = 1,2,..,16 images
 		else
 			random = getRandomInt(1, 10);
