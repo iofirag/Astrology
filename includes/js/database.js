@@ -23,8 +23,8 @@ function readFromJson() {
 		for (i in data.users) {
 			database.push(data.users[i]);
 		}
-	}),success(function(){
-		
+	// }),success(function(){
+	// 		
 	});
 }
 
